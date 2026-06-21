@@ -1,1 +1,308 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nettoyage par Drone — Toitures, Façades & Panneaux Solaires | OrizonDrone</title>
+  <meta name="description" content='OrizonDrone réalise le nettoyage et démoussage de toitures, façades et panneaux solaires par drone en Haute-Garonne et départements voisins. Sans échafaudage, sans risque. Devis gratuit.' />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.orizondrone.fr/nettoyage-drone/" />
+  <meta property="og:title" content="Nettoyage par Drone — Toitures, Façades & Panneaux Solaires | OrizonDrone" />
+  <meta property="og:description" content='OrizonDrone réalise le nettoyage et démoussage de toitures, façades et panneaux solaires par drone en Haute-Garonne et départements voisins. Sans échafaudage, sans risque. Devis gratuit.' />
+  <meta property="og:url" content="https://www.orizondrone.fr/nettoyage-drone/" />
+  <meta property="og:type" content="website" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Nettoyage par drone",
+    "provider": {
+      "@type": "LocalBusiness",
+      "name": "OrizonDrone",
+      "telephone": "+33759654934",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Boussens",
+        "postalCode": "31360",
+        "addressCountry": "FR"
+      }
+    },
+    "areaServed": ["Haute-Garonne", "Ariège", "Hautes-Pyrénées", "Gers"],
+    "url": "https://www.orizondrone.fr/nettoyage-drone/"
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --teal: #0F766E; --teal-light: #14B8A6; --teal-dim: #0d6b63;
+      --bg: #0a0a0a; --bg-card: #111111; --bg-card2: #161616;
+      --border: rgba(15,118,110,0.25); --text: #e5e5e5; --text-muted: #888; --white: #ffffff;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; font-size: 16px; }
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(10,10,10,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); padding: 0 2rem; height: 64px; display: flex; align-items: center; justify-content: space-between; }
+    .nav-logo { font-family: 'Orbitron', sans-serif; font-weight: 900; font-size: 1.1rem; color: var(--white); text-decoration: none; letter-spacing: 0.05em; }
+    .nav-logo span { color: var(--teal-light); }
+    .nav-links { display: flex; gap: 1.2rem; list-style: none; }
+    .nav-links a { color: var(--text-muted); text-decoration: none; font-size: 0.85rem; font-weight: 500; transition: color 0.2s; white-space: nowrap; }
+    .nav-links a:hover { color: var(--teal-light); }
+    .breadcrumb { padding: 6rem 2rem 0; max-width: 1100px; margin: 0 auto; }
+    .breadcrumb-nav { display: flex; align-items: center; gap: 0.5rem; font-size: 0.8rem; color: var(--text-muted); }
+    .breadcrumb-nav a { color: var(--text-muted); text-decoration: none; }
+    .breadcrumb-nav a:hover { color: var(--teal-light); }
+    .breadcrumb-nav span { color: var(--teal-light); }
+    .hero { min-height: 90vh; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 8rem 2rem 4rem; position: relative; overflow: hidden; }
+    .hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 80% 60% at 50% 40%, rgba(15,118,110,0.12) 0%, transparent 70%); pointer-events: none; }
+    .hero-eyebrow { font-family: 'Orbitron', sans-serif; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.2em; color: var(--teal-light); text-transform: uppercase; margin-bottom: 1.5rem; }
+    .hero h1 { font-family: 'Orbitron', sans-serif; font-weight: 900; font-size: clamp(1.8rem, 4vw, 3rem); line-height: 1.15; color: var(--white); margin-bottom: 1.5rem; max-width: 800px; }
+    .hero h1 span { color: var(--teal-light); }
+    .hero-sub { font-size: 1.05rem; color: var(--text-muted); max-width: 620px; margin-bottom: 2.5rem; line-height: 1.75; }
+    .hero-badges { display: flex; flex-wrap: wrap; gap: 0.75rem; justify-content: center; margin-bottom: 2.5rem; }
+    .badge { background: rgba(15,118,110,0.12); border: 1px solid var(--border); color: var(--teal-light); padding: 0.4rem 1rem; border-radius: 100px; font-size: 0.8rem; font-weight: 500; }
+    .hero-cta { display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; }
+    .btn-primary { background: var(--teal); color: var(--white); padding: 0.85rem 2rem; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 0.95rem; transition: background 0.2s; }
+    .btn-primary:hover { background: var(--teal-dim); }
+    .btn-secondary { border: 1px solid var(--border); color: var(--text); padding: 0.85rem 2rem; border-radius: 6px; text-decoration: none; font-weight: 500; font-size: 0.95rem; transition: border-color 0.2s, color 0.2s; }
+    .btn-secondary:hover { border-color: var(--teal-light); color: var(--teal-light); }
+    section { padding: 5rem 2rem; }
+    .container { max-width: 1100px; margin: 0 auto; }
+    .section-label { font-family: 'Orbitron', sans-serif; font-size: 0.65rem; font-weight: 700; letter-spacing: 0.2em; color: var(--teal-light); text-transform: uppercase; margin-bottom: 1rem; }
+    .section-title { font-family: 'Orbitron', sans-serif; font-weight: 900; font-size: clamp(1.4rem, 3vw, 2rem); color: var(--white); line-height: 1.2; margin-bottom: 1rem; }
+    .section-intro { color: var(--text-muted); max-width: 700px; line-height: 1.8; margin-bottom: 3rem; }
+    .cards-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; }
+    .card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 10px; padding: 2rem; transition: border-color 0.2s; }
+    .card:hover { border-color: var(--teal-light); }
+    .card-num { font-family: 'Orbitron', sans-serif; font-size: 0.7rem; color: var(--teal-light); font-weight: 700; letter-spacing: 0.15em; margin-bottom: 1rem; }
+    .card h3 { font-size: 1rem; font-weight: 600; color: var(--white); margin-bottom: 0.75rem; }
+    .card p { color: var(--text-muted); font-size: 0.88rem; line-height: 1.65; }
+    .tags { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1rem; }
+    .tag { background: rgba(15,118,110,0.1); color: var(--teal-light); padding: 0.25rem 0.6rem; border-radius: 4px; font-size: 0.75rem; font-weight: 500; }
+    .deux-col { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start; }
+    .deux-col p { color: var(--text-muted); line-height: 1.8; margin-bottom: 1rem; }
+    .liste-zones { list-style: none; display: flex; flex-direction: column; gap: 0.5rem; }
+    .liste-zones li { color: var(--text); font-size: 0.9rem; padding-left: 1.25rem; position: relative; }
+    .liste-zones li::before { content: '▸'; position: absolute; left: 0; color: var(--teal-light); font-size: 0.75rem; top: 0.15em; }
+    .block-info { background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 2.5rem; }
+    .livrables-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-top: 2rem; }
+    .livrable-item { background: var(--bg-card2); border: 1px solid var(--border); border-radius: 8px; padding: 1.25rem; }
+    .livrable-item h4 { font-size: 0.9rem; font-weight: 600; color: var(--white); margin-bottom: 0.5rem; }
+    .livrable-item p { color: var(--text-muted); font-size: 0.82rem; line-height: 1.55; }
+    .zones-villes { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 0.75rem; margin-top: 2rem; }
+    .ville-link { background: var(--bg-card2); border: 1px solid var(--border); border-radius: 8px; padding: 1rem 1.25rem; text-decoration: none; transition: border-color 0.2s, background 0.2s; }
+    .ville-link:hover { border-color: var(--teal-light); background: rgba(15,118,110,0.06); }
+    .ville-link .ville-nom { font-size: 0.9rem; font-weight: 600; color: var(--white); display: block; margin-bottom: 0.2rem; }
+    .ville-link .ville-dept { font-size: 0.75rem; color: var(--text-muted); }
+    .contact-block { background: linear-gradient(135deg, rgba(15,118,110,0.08) 0%, transparent 60%); border: 1px solid var(--border); border-radius: 12px; padding: 3.5rem; text-align: center; }
+    .contact-block h2 { font-family: 'Orbitron', sans-serif; font-weight: 900; font-size: clamp(1.3rem, 3vw, 1.8rem); color: var(--white); margin-bottom: 1rem; }
+    .contact-block p { color: var(--text-muted); margin-bottom: 2rem; max-width: 480px; margin-left: auto; margin-right: auto; }
+    .contact-info { display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; margin-top: 2rem; padding-top: 2rem; border-top: 1px solid var(--border); }
+    .contact-info a { color: var(--text-muted); text-decoration: none; font-size: 0.9rem; transition: color 0.2s; }
+    .contact-info a:hover { color: var(--teal-light); }
+    .autres-prestations { display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 2rem; }
+    .prestation-link { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 1rem 1.5rem; text-decoration: none; transition: border-color 0.2s; }
+    .prestation-link:hover { border-color: var(--teal-light); }
+    .prestation-link span { font-size: 0.85rem; font-weight: 600; color: var(--white); display: block; margin-bottom: 0.2rem; }
+    .prestation-link small { font-size: 0.75rem; color: var(--text-muted); }
+    .divider { height: 1px; background: var(--border); margin: 0 2rem; }
+    footer { border-top: 1px solid var(--border); padding: 2rem; text-align: center; color: var(--text-muted); font-size: 0.8rem; }
+    footer a { color: var(--teal-light); text-decoration: none; }
+    @media (max-width: 768px) { .nav-links { display: none; } .deux-col { grid-template-columns: 1fr; } .contact-block { padding: 2rem; } }
+</style>
+</head>
+<body>
 
+  <nav>
+    <a href="https://www.orizondrone.fr/" class="nav-logo">ORIZON<span>DRONE</span></a>
+    <ul class="nav-links">
+      <li><a href="/photogrammetrie-drone/">Photogrammétrie</a></li>
+      <li><a href="/inspection-drone/">Inspection</a></li>
+      <li><a href="/nettoyage-drone/">Nettoyage</a></li>
+      <li><a href="/captation-aerienne/">Captation</a></li>
+      <li><a href="https://www.orizondrone.fr/#contact" style="color:var(--teal-light)">Devis gratuit</a></li>
+    </ul>
+  </nav>
+
+  <div class="breadcrumb">
+    <nav class="breadcrumb-nav" aria-label="Fil d'Ariane">
+      <a href="https://www.orizondrone.fr/">OrizonDrone</a>
+      <span>›</span>
+      <span>Nettoyage par drone</span>
+    </nav>
+  </div>
+
+  <section class="hero">
+    <p class="hero-eyebrow">Haute-Garonne · Ariège · Hautes-Pyrénées · Gers</p>
+    <h1>Nettoyage par drone<br /><span>Toitures, façades & panneaux solaires</span></h1>
+    <p class="hero-sub">Pulvérisation démoussante et nettoyage haute pression par drone jusqu'à 50 m de hauteur. Aucun intervenant sur la structure, aucun échafaudage, aucune nacelle. Résultat professionnel, délai réduit.</p>
+    <div class="hero-badges"><span class="badge">Rampe 3 buses</span><span class="badge">Jusqu'à 50 m</span><span class="badge">Sans échafaudage</span><span class="badge">Produits biodégradables</span></div>
+    <div class="hero-cta">
+      <a href="tel:0759654934" class="btn-primary">07 59 65 49 34</a>
+      <a href="https://www.orizondrone.fr/#contact" class="btn-secondary">Demander un devis</a>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <section>
+    <div class="container">
+      <p class="section-label">Applications</p>
+      <h2 class="section-title">Toutes surfaces,<br />tous types de bâtiments</h2>
+      <p class="section-intro">Le drone de nettoyage OrizonDrone est équipé d'une rampe 3 buses alimentée depuis le sol par tuyau. Aucun produit à bord du drone — la réserve reste au sol, ce qui permet des traitements de longue durée sans interruption. Produits fongicides, bactéricides et algicides biodégradables, adaptés aux matériaux sensibles.</p>
+      <div class="cards-grid">
+        <div class="card">
+          <p class="card-num">01</p>
+          <h3>Démoussage de toitures</h3>
+          <p>Traitement démoussant sur tuiles, ardoises, zinc et bac acier. Accès au faîtage et aux zones complexes sans aucun contact humain avec la structure. Résultat visible dès les premières pluies, effet durable 3 à 5 ans.</p>
+          <div class="tags"><span class="tag">Tuile · Ardoise · Zinc</span><span class="tag">Faîtage inclus</span><span class="tag">Effet 3–5 ans</span></div>
+        </div>
+        <div class="card">
+          <p class="card-num">02</p>
+          <h3>Nettoyage de façades</h3>
+          <p>Décrrassage et démoussage de façades en brique, pierre, enduit ou bardage. Le drone maintient une distance et une pression constantes — résultat homogène, sans risque de dégradation des joints ou des matériaux.</p>
+          <div class="tags"><span class="tag">Brique · Pierre · Enduit</span><span class="tag">Pression constante</span><span class="tag">Sans dégradation</span></div>
+        </div>
+        <div class="card">
+          <p class="card-num">03</p>
+          <h3>Nettoyage de panneaux solaires</h3>
+          <p>Dépôts de poussière, lichens et fientes réduisent le rendement des panneaux jusqu'à 30%. Le drone nettoie l'ensemble d'une installation sans démontage, sans intervenant en toiture, en une fraction du temps d'un nettoyage traditionnel.</p>
+          <div class="tags"><span class="tag">Rendement +30%</span><span class="tag">Sans démontage</span><span class="tag">Rapidité</span></div>
+        </div>
+        <div class="card">
+          <p class="card-num">04</p>
+          <h3>Patrimoine & bâtiments classés</h3>
+          <p>Produits biologiques doux adaptés aux matériaux anciens — pierre calcaire, tuf, grès. Pression réglable selon la nature du support. Particulièrement adapté aux églises, mairies, châteaux et bâtiments protégés.</p>
+          <div class="tags"><span class="tag">Pierre calcaire · Tuf</span><span class="tag">Pression réglable</span><span class="tag">Bâtiments classés</span></div>
+        </div></div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <section>
+    <div class="container">
+      <p class="section-label">Pourquoi le drone</p>
+      <h2 class="section-title">Zéro risque,<br />zéro infrastructure lourde</h2>
+      <div class="block-info">
+        <p>Un nettoyage traditionnel en hauteur nécessite échafaudage, nacelle élévatrice ou cordistes — coût élevé, délai long, risque accidentel pour les intervenants. Le drone élimine ces contraintes : pas d'infrastructure, pas de risque de chute, intervention en quelques heures sur des bâtiments inaccessibles.</p><p>Pour les collectivités, c'est un argument budgétaire direct : le coût d'une intervention drone est systématiquement inférieur à celui d'un échafaudage sur un bâtiment de plus de 10 m. Pour le patrimoine classé, c'est aussi l'assurance de ne pas dégrader des matériaux fragiles avec des équipements lourds.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <section>
+    <div class="container">
+      <p class="section-label">Zone d'intervention</p>
+      <h2 class="section-title">Haute-Garonne, Ariège<br />et départements voisins</h2>
+      <div class="deux-col">
+        <div>
+          <p>Intervention en Haute-Garonne, Ariège, Hautes-Pyrénées et Gers. Devis gratuit sous 24h avec calcul de surface approximatif sur photo satellite. Tarif à la surface ou à la journée selon configuration.</p>
+          <p>Collectivités, architectes, BTP, industriels — devis gratuit sous 24h.</p>
+        </div>
+        <ul class="liste-zones">
+          <li>Haute-Garonne (31) — Saint-Gaudens, Cazères, Muret, Carbonne, Luchon</li>
+          <li>Ariège (09) — Foix, Saint-Girons, Pamiers, Tarascon</li>
+          <li>Hautes-Pyrénées (65) — Tarbes, Lannemezan, Bagnères-de-Bigorre</li>
+          <li>Gers (32) — Auch, Lombez, L'Isle-Jourdain</li>
+          <li>Toulouse et périphérie sud sur demande</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <section>
+    <div class="container">
+      <p class="section-label">Intervention par ville</p>
+      <h2 class="section-title">Villes desservies</h2>
+      <p class="section-intro">Pages dédiées par commune pour chaque prestation.</p>
+      <div class="zones-villes">
+        <a href="/saint-gaudens/nettoyage-drone/" class="ville-link">
+          <span class="ville-nom">Saint-Gaudens</span>
+          <span class="ville-dept">Dept. 31</span>
+        </a>
+        <a href="/cazeres/nettoyage-drone/" class="ville-link">
+          <span class="ville-nom">Cazères</span>
+          <span class="ville-dept">Dept. 31</span>
+        </a>
+        <a href="/carbonne/nettoyage-drone/" class="ville-link">
+          <span class="ville-nom">Carbonne</span>
+          <span class="ville-dept">Dept. 31</span>
+        </a>
+        <a href="/muret/nettoyage-drone/" class="ville-link">
+          <span class="ville-nom">Muret</span>
+          <span class="ville-dept">Dept. 31</span>
+        </a>
+        <a href="/montrejeau/nettoyage-drone/" class="ville-link">
+          <span class="ville-nom">Montréjeau</span>
+          <span class="ville-dept">Dept. 31</span>
+        </a>
+        <a href="/luchon/nettoyage-drone/" class="ville-link">
+          <span class="ville-nom">Luchon</span>
+          <span class="ville-dept">Dept. 31</span>
+        </a>
+        <a href="/foix/nettoyage-drone/" class="ville-link">
+          <span class="ville-nom">Foix</span>
+          <span class="ville-dept">Dept. 09</span>
+        </a>
+        <a href="/saint-girons/nettoyage-drone/" class="ville-link">
+          <span class="ville-nom">Saint-Girons</span>
+          <span class="ville-dept">Dept. 09</span>
+        </a></div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <section>
+    <div class="container">
+      <p class="section-label">Nos autres prestations</p>
+      <h2 class="section-title">Découvrez aussi</h2>
+      <div class="autres-prestations">
+        <a href="/photogrammetrie-drone/" class="prestation-link">
+          <span>Photogrammétrie</span>
+          <small>Relevé 3D, orthophoto</small>
+        </a>
+        <a href="/inspection-drone/" class="prestation-link">
+          <span>Inspection technique</span>
+          <small>Toitures, façades, ouvrages</small>
+        </a>
+        <a href="/captation-aerienne/" class="prestation-link">
+          <span>Captation aérienne</span>
+          <small>Photos & vidéos pro</small>
+        </a></div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <section>
+    <div class="container">
+      <div class="contact-block">
+        <h2>Un bâtiment à nettoyer ?</h2>
+        <p>Toiture, façade ou panneaux solaires — envoyez-moi l'adresse, j'estime la surface et je vous envoie un devis sous 24h.</p>
+        <div class="hero-cta">
+          <a href="tel:0759654934" class="btn-primary">07 59 65 49 34</a>
+          <a href="https://www.orizondrone.fr/#contact" class="btn-secondary">Formulaire de contact</a>
+        </div>
+        <div class="contact-info">
+          <a href="mailto:orizondrone@gmail.com">orizondrone@gmail.com</a>
+          <span style="color:rgba(15,118,110,0.25)">·</span>
+          <a href="https://www.orizondrone.fr/">www.orizondrone.fr</a>
+          <span style="color:rgba(15,118,110,0.25)">·</span>
+          <span>Boussens (31360) — Comminges</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 OrizonDrone · Thomas · Boussens, Haute-Garonne (31) · <a href="https://www.orizondrone.fr/">Retour au site principal</a></p>
+  </footer>
+
+</body>
+</html>
