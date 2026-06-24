@@ -1,1 +1,455 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FAQ — Questions fréquentes sur nos prestations drone | OrizonDrone</title>
+  <meta name="description" content="Toutes les réponses aux questions des collectivités, architectes et professionnels sur les prestations drone OrizonDrone. Autorisations, livrables, délais, tarifs." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.orizondrone.fr/faq/" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Faut-il une autorisation pour faire voler un drone professionnel ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Oui, et je m'en occupe intégralement. En tant qu'opérateur UAS déclaré DGAC et télépilote certifié CATS, je gère toutes les autorisations de vol en amont de chaque mission — déclaration de vol, coordination avec les services de l'aviation civile si nécessaire. Vous n'avez aucune démarche administrative à réaliser."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Quels formats de fichiers livrez-vous ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Selon la prestation : GeoTIFF géoréférencé pour les orthophotos, LAS pour les nuages de points, OBJ pour les modèles 3D, PDF annoté pour les rapports d'inspection. Tous les fichiers sont livrés prêts à l'emploi dans vos logiciels métiers — AutoCAD, Revit, QGIS, ArcGIS. Le jumeau numérique interactif One3D est accessible depuis un navigateur sans logiciel spécifique."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Combien de temps dure une mission ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Une mission standard (bâtiment communal, inspection de toiture, relevé parcellaire) dure entre 1 et 3 heures sur site. Le traitement des données et la préparation des livrables prennent 24 à 48h supplémentaires. Pour les missions complexes — grands ensembles, relevés multi-bâtiments — comptez une demi-journée à une journée complète sur site."
+        }
+      }
+    ]
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --teal: #0F766E; --teal-light: #14B8A6; --teal-dim: #0d6b63;
+      --bg: #0a0a0a; --bg-card: #111111; --bg-card2: #161616;
+      --border: rgba(15,118,110,0.25); --text: #e5e5e5; --text-muted: #888; --white: #ffffff;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; font-size: 16px; }
 
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(10,10,10,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); padding: 0 2rem; height: 64px; display: flex; align-items: center; justify-content: space-between; }
+    .nav-logo { font-family: 'Orbitron', sans-serif; font-weight: 900; font-size: 1.1rem; color: var(--white); text-decoration: none; letter-spacing: 0.05em; }
+    .nav-logo span { color: var(--teal-light); }
+    .nav-links { display: flex; gap: 1.2rem; list-style: none; }
+    .nav-links a { color: var(--text-muted); text-decoration: none; font-size: 0.85rem; font-weight: 500; transition: color 0.2s; white-space: nowrap; }
+    .nav-links a:hover { color: var(--teal-light); }
+
+    .breadcrumb { padding: 6rem 2rem 0; max-width: 1100px; margin: 0 auto; }
+    .breadcrumb-nav { display: flex; align-items: center; gap: 0.5rem; font-size: 0.8rem; color: var(--text-muted); }
+    .breadcrumb-nav a { color: var(--text-muted); text-decoration: none; }
+    .breadcrumb-nav a:hover { color: var(--teal-light); }
+    .breadcrumb-nav span { color: var(--teal-light); }
+
+    .hero { min-height: 50vh; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 8rem 2rem 4rem; position: relative; overflow: hidden; }
+    .hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 80% 60% at 50% 40%, rgba(15,118,110,0.10) 0%, transparent 70%); pointer-events: none; }
+    .hero-eyebrow { font-family: 'Orbitron', sans-serif; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.2em; color: var(--teal-light); text-transform: uppercase; margin-bottom: 1.5rem; }
+    .hero h1 { font-family: 'Orbitron', sans-serif; font-weight: 900; font-size: clamp(2rem, 5vw, 3rem); line-height: 1.15; color: var(--white); margin-bottom: 1.5rem; max-width: 700px; }
+    .hero h1 span { color: var(--teal-light); }
+    .hero-sub { font-size: 1rem; color: var(--text-muted); max-width: 560px; line-height: 1.75; }
+
+    section { padding: 5rem 2rem; }
+    .container { max-width: 860px; margin: 0 auto; }
+    .section-label { font-family: 'Orbitron', sans-serif; font-size: 0.65rem; font-weight: 700; letter-spacing: 0.2em; color: var(--teal-light); text-transform: uppercase; margin-bottom: 1rem; }
+    .section-title { font-family: 'Orbitron', sans-serif; font-weight: 900; font-size: clamp(1.3rem, 3vw, 1.8rem); color: var(--white); line-height: 1.2; margin-bottom: 2.5rem; }
+
+    /* FAQ ACCORDION */
+    .faq-groupe { margin-bottom: 3rem; }
+    .faq-groupe-titre { font-family: 'Orbitron', sans-serif; font-size: 0.65rem; font-weight: 700; letter-spacing: 0.2em; color: var(--teal-light); text-transform: uppercase; margin-bottom: 1rem; padding-bottom: 0.75rem; border-bottom: 1px solid var(--border); }
+
+    .faq-item { border: 1px solid var(--border); border-radius: 8px; margin-bottom: 0.75rem; overflow: hidden; transition: border-color 0.2s; }
+    .faq-item:hover { border-color: rgba(20,184,166,0.4); }
+    .faq-item.open { border-color: var(--teal-light); }
+
+    .faq-question { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: 1.25rem 1.5rem; cursor: pointer; background: var(--bg-card); user-select: none; }
+    .faq-question h3 { font-size: 0.95rem; font-weight: 600; color: var(--white); line-height: 1.4; }
+    .faq-chevron { flex-shrink: 0; width: 20px; height: 20px; border: 1px solid var(--border); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--teal-light); font-size: 0.65rem; transition: transform 0.25s, background 0.2s; }
+    .faq-item.open .faq-chevron { transform: rotate(180deg); background: rgba(15,118,110,0.15); }
+
+    .faq-reponse { max-height: 0; overflow: hidden; transition: max-height 0.3s ease; background: var(--bg-card2); }
+    .faq-reponse-inner { padding: 1.25rem 1.5rem 1.5rem; }
+    .faq-reponse p { color: var(--text-muted); font-size: 0.9rem; line-height: 1.75; margin-bottom: 0.75rem; }
+    .faq-reponse p:last-child { margin-bottom: 0; }
+    .faq-reponse strong { color: var(--white); font-weight: 600; }
+    .faq-reponse ul { list-style: none; margin-top: 0.75rem; display: flex; flex-direction: column; gap: 0.4rem; }
+    .faq-reponse li { color: var(--text-muted); font-size: 0.88rem; padding-left: 1.1rem; position: relative; line-height: 1.6; }
+    .faq-reponse li::before { content: '▸'; position: absolute; left: 0; color: var(--teal-light); font-size: 0.7rem; top: 0.2em; }
+    .faq-item.open .faq-reponse { max-height: 600px; }
+
+    .contact-block { background: linear-gradient(135deg, rgba(15,118,110,0.08) 0%, transparent 60%); border: 1px solid var(--border); border-radius: 12px; padding: 3.5rem; text-align: center; }
+    .contact-block h2 { font-family: 'Orbitron', sans-serif; font-weight: 900; font-size: clamp(1.3rem, 3vw, 1.8rem); color: var(--white); margin-bottom: 1rem; }
+    .contact-block p { color: var(--text-muted); margin-bottom: 2rem; max-width: 480px; margin-left: auto; margin-right: auto; line-height: 1.7; }
+    .hero-cta { display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; }
+    .btn-primary { background: var(--teal); color: var(--white); padding: 0.85rem 2rem; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 0.95rem; transition: background 0.2s; }
+    .btn-primary:hover { background: var(--teal-dim); }
+    .btn-secondary { border: 1px solid var(--border); color: var(--text); padding: 0.85rem 2rem; border-radius: 6px; text-decoration: none; font-weight: 500; font-size: 0.95rem; }
+    .btn-secondary:hover { border-color: var(--teal-light); color: var(--teal-light); }
+    .contact-info { display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; margin-top: 2rem; padding-top: 2rem; border-top: 1px solid var(--border); }
+    .contact-info a { color: var(--text-muted); text-decoration: none; font-size: 0.9rem; }
+    .contact-info a:hover { color: var(--teal-light); }
+
+    .divider { height: 1px; background: var(--border); margin: 0 2rem; }
+    footer { border-top: 1px solid var(--border); padding: 2rem; text-align: center; color: var(--text-muted); font-size: 0.8rem; }
+    footer a { color: var(--teal-light); text-decoration: none; }
+    @media (max-width: 768px) { .nav-links { display: none; } .contact-block { padding: 2rem; } }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="https://www.orizondrone.fr/" class="nav-logo">ORIZON<span>DRONE</span></a>
+    <ul class="nav-links">
+      <li><a href="/photogrammetrie-drone/">Photogrammétrie</a></li>
+      <li><a href="/inspection-drone/">Inspection</a></li>
+      <li><a href="/nettoyage-drone/">Nettoyage</a></li>
+      <li><a href="/captation-aerienne/">Captation</a></li>
+      <li><a href="/a-propos/">À propos</a></li>
+      <li><a href="https://www.orizondrone.fr/#contact" style="color:var(--teal-light)">Devis gratuit</a></li>
+    </ul>
+  </nav>
+
+  <div class="breadcrumb">
+    <nav class="breadcrumb-nav" aria-label="Fil d'Ariane">
+      <a href="https://www.orizondrone.fr/">OrizonDrone</a>
+      <span>›</span>
+      <span>FAQ</span>
+    </nav>
+  </div>
+
+  <section class="hero">
+    <p class="hero-eyebrow">Questions fréquentes</p>
+    <h1>Tout ce que vous voulez<br /><span>savoir avant d'appeler</span></h1>
+    <p class="hero-sub">Les questions que posent les élus, architectes et professionnels avant de faire appel à OrizonDrone. Des réponses directes, sans jargon.</p>
+  </section>
+
+  <div class="divider"></div>
+
+  <section>
+    <div class="container">
+
+      <!-- GROUPE 1 : Réglementation -->
+      <div class="faq-groupe">
+        <p class="faq-groupe-titre">Réglementation & conformité</p>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <h3>Faut-il une autorisation pour faire voler un drone professionnel ?</h3>
+            <div class="faq-chevron">▾</div>
+          </div>
+          <div class="faq-reponse">
+            <div class="faq-reponse-inner">
+              <p>Oui — et je m'en occupe intégralement. En tant qu'opérateur UAS déclaré DGAC et télépilote certifié CATS, je gère toutes les démarches administratives en amont de chaque mission.</p>
+              <p>Selon la zone de vol (proximité d'aérodrome, espace urbain dense, zone militaire), des autorisations spécifiques peuvent être nécessaires. Je les obtiens avant chaque intervention. <strong>Vous n'avez aucune démarche à réaliser de votre côté.</strong></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <h3>Êtes-vous assuré pour les interventions sur des bâtiments publics ?</h3>
+            <div class="faq-chevron">▾</div>
+          </div>
+          <div class="faq-reponse">
+            <div class="faq-reponse-inner">
+              <p>Oui. OrizonDrone dispose d'une assurance responsabilité civile professionnelle spécifique à l'activité drone, couvrant les interventions sur les bâtiments publics, les bâtiments classés et les sites industriels.</p>
+              <p>Une attestation d'assurance peut être fournie sur demande avant toute intervention — document souvent requis dans les marchés publics.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <h3>Pouvez-vous intervenir sur un bâtiment classé Monument Historique ?</h3>
+            <div class="faq-chevron">▾</div>
+          </div>
+          <div class="faq-reponse">
+            <div class="faq-reponse-inner">
+              <p>Oui, sous réserve des autorisations de vol spécifiques aux zones concernées. Le drone est particulièrement adapté aux bâtiments classés : il n'y a aucun contact physique avec la structure, aucun ancrage dans la maçonnerie, aucun risque de dégradation mécanique.</p>
+              <p>Pour les missions de nettoyage sur patrimoine classé, j'utilise des produits biologiques doux testés sur les matériaux anciens — pierre calcaire, tuf, grès pyrénéen, ardoise naturelle.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <h3>La prestation drone est-elle éligible aux marchés publics ?</h3>
+            <div class="faq-chevron">▾</div>
+          </div>
+          <div class="faq-reponse">
+            <div class="faq-reponse-inner">
+              <p>Oui. OrizonDrone intervient en tant qu'entreprise individuelle déclarée, avec SIRET, assurance RC Pro et toutes les pièces administratives nécessaires à la constitution d'un dossier de marché public.</p>
+              <p>Pour les collectivités souhaitant référencer OrizonDrone dans leurs prestataires habituels, je fournis sur demande : Kbis, attestation URSSAF, attestation assurance, références de missions.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- GROUPE 2 : Photogrammétrie & livrables -->
+      <div class="faq-groupe">
+        <p class="faq-groupe-titre">Photogrammétrie & livrables</p>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <h3>Quels formats de fichiers livrez-vous ?</h3>
+            <div class="faq-chevron">▾</div>
+          </div>
+          <div class="faq-reponse">
+            <div class="faq-reponse-inner">
+              <p>Selon la prestation :</p>
+              <ul>
+                <li>Orthophoto : GeoTIFF géoréférencé Lambert 93, directement mesurable dans QGIS, ArcGIS ou AutoCAD</li>
+                <li>Nuage de points : LAS haute densité, compatible CloudCompare, Revit, AutoCAD</li>
+                <li>Modèle 3D : OBJ texturé, FBX, RCS selon votre logiciel</li>
+                <li>Jumeau numérique : lien One3D accessible depuis un navigateur, sans logiciel spécifique</li>
+                <li>Rapport d'inspection : PDF annoté avec photos haute résolution horodatées</li>
+              </ul>
+              <p>Tous les livrables sont prêts à l'emploi — aucun retraitement nécessaire de votre côté.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <h3>Quelle est la précision des relevés photogrammétriques ?</h3>
+            <div class="faq-chevron">▾</div>
+          </div>
+          <div class="faq-reponse">
+            <div class="faq-reponse-inner">
+              <p>Précision centimétrique grâce au réseau RTK Centipède — correction en temps réel sans points d'appui au sol (GCP). La nacelle Zenmuse P1 (45 MP plein format) combinée au positionnement RTK du Matrice 350 produit des orthophotos avec une résolution au sol de 1 à 3 cm selon la hauteur de vol.</p>
+              <p>Pour les projets nécessitant une précision millimétrique (relevé de façade pour restauration de monument, levé topographique pour géomètre), des points d'appui peuvent être mis en place sur demande.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <h3>Qu'est-ce qu'un jumeau numérique et à quoi ça sert concrètement ?</h3>
+            <div class="faq-chevron">▾</div>
+          </div>
+          <div class="faq-reponse">
+            <div class="faq-reponse-inner">
+              <p>Un jumeau numérique est une représentation 3D interactive de votre bâtiment ou de votre site, navigable depuis un navigateur web — sans logiciel à installer. Vous pouvez le partager avec vos équipes, votre maître d'ouvrage ou votre bureau d'études avec un simple lien.</p>
+              <p>Concrètement, ça sert à :</p>
+              <ul>
+                <li>Faire visiter un projet à distance sans déplacement</li>
+                <li>Présenter l'état d'un bâtiment en conseil municipal</li>
+                <li>Partager un relevé avec un architecte ou un bureau d'études sans envoyer des fichiers lourds</li>
+                <li>Documenter l'état d'un patrimoine à un instant T</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <h3>Les fichiers sont-ils compatibles avec nos logiciels métiers ?</h3>
+            <div class="faq-chevron">▾</div>
+          </div>
+          <div class="faq-reponse">
+            <div class="faq-reponse-inner">
+              <p>Oui. Avant chaque mission, je vous demande quels logiciels vous utilisez pour adapter les formats de livraison. Les formats standards couvrent la quasi-totalité des logiciels professionnels :</p>
+              <ul>
+                <li>AutoCAD, Revit, ArchiCAD — OBJ, RCS, LAS</li>
+                <li>QGIS, ArcGIS — GeoTIFF, LAS</li>
+                <li>Logiciels BTP et géomètres — DWG, DXF sur demande</li>
+                <li>Logiciels de gestion patrimoniale — PDF, images haute résolution</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- GROUPE 3 : Inspection & nettoyage -->
+      <div class="faq-groupe">
+        <p class="faq-groupe-titre">Inspection & nettoyage</p>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <h3>Le rapport d'inspection est-il exploitable pour un dossier d'assurance ?</h3>
+            <div class="faq-chevron">▾</div>
+          </div>
+          <div class="faq-reponse">
+            <div class="faq-reponse-inner">
+              <p>Oui. Le rapport PDF livré après chaque inspection contient des photos haute résolution horodatées, une localisation GPS des désordres et une description technique des pathologies observées. Ce format est directement accepté par la plupart des compagnies d'assurance pour les dossiers de sinistre.</p>
+              <p>Pour les expertises post-sinistre (grêle, tempête, incendie), j'interviens sous 24 à 48h avec un rapport daté exploitable immédiatement.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <h3>Les produits de nettoyage sont-ils dangereux pour les occupants ?</h3>
+            <div class="faq-chevron">▾</div>
+          </div>
+          <div class="faq-reponse">
+            <div class="faq-reponse-inner">
+              <p>Non. J'utilise des produits fongicides, bactéricides et algicides biodégradables, homologués pour une utilisation en zone habitée. Les fiches de données de sécurité sont disponibles sur demande.</p>
+              <p>Le bâtiment peut rester occupé pendant l'intervention — il n'est pas nécessaire d'évacuer les locaux. Une distance de sécurité de quelques mètres autour de la zone de pulvérisation est simplement demandée pendant la mission.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <h3>Quelle est la durée d'efficacité du traitement démoussant ?</h3>
+            <div class="faq-chevron">▾</div>
+          </div>
+          <div class="faq-reponse">
+            <div class="faq-reponse-inner">
+              <p>Entre 3 et 5 ans selon l'exposition du bâtiment, le type de matériau et les conditions climatiques locales. Un bâtiment exposé nord dans un secteur humide (Couserans, vallées pyrénéennes) sera traité plus fréquemment qu'un bâtiment en zone sèche bien exposé.</p>
+              <p>Un contrôle visuel à 10 mois est inclus dans chaque devis de nettoyage — il permet de vérifier l'efficacité du traitement et d'anticiper le prochain cycle.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- GROUPE 4 : Pratique -->
+      <div class="faq-groupe">
+        <p class="faq-groupe-titre">Organisation & tarifs</p>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <h3>Combien de temps dure une mission ?</h3>
+            <div class="faq-chevron">▾</div>
+          </div>
+          <div class="faq-reponse">
+            <div class="faq-reponse-inner">
+              <p>Sur site, une mission standard dure entre 1 et 3 heures selon la taille du bâtiment et la prestation. Le traitement des données et la préparation des livrables prennent 24 à 48h supplémentaires.</p>
+              <ul>
+                <li>Inspection d'une toiture standard : 45 min à 1h30 sur site</li>
+                <li>Relevé photogrammétrique d'un bâtiment moyen : 1h à 2h sur site</li>
+                <li>Nettoyage d'une toiture de 300 m² : environ 1h sur site</li>
+                <li>Mission multi-bâtiments : demi-journée à journée complète</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <h3>Intervenez-vous par mauvais temps ?</h3>
+            <div class="faq-chevron">▾</div>
+          </div>
+          <div class="faq-reponse">
+            <div class="faq-reponse-inner">
+              <p>Le Matrice 350 RTK est résistant à la pluie légère (IP54) et au vent jusqu'à 12 m/s. Les missions de photogrammétrie nécessitent cependant un ciel dégagé ou légèrement nuageux pour des images exploitables — pas de forte pluie, pas de brouillard.</p>
+              <p>En cas de conditions météo défavorables le jour de la mission, je propose systématiquement un report sans frais supplémentaires. Je surveille la météo en amont et vous préviens 24h avant si un report est nécessaire.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <h3>Comment se passe la facturation pour une collectivité ?</h3>
+            <div class="faq-question">
+            </div>
+            <div class="faq-chevron">▾</div>
+          </div>
+          <div class="faq-reponse">
+            <div class="faq-reponse-inner">
+              <p>Je fournis un devis détaillé avant chaque mission, avec description précise des prestations, des livrables et des délais. La facture est émise après livraison des fichiers, avec paiement à 30 jours pour les collectivités.</p>
+              <p>Pour les marchés publics, je fournis tous les documents administratifs nécessaires : Kbis, attestation URSSAF, attestation assurance RC Pro, références de missions.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <h3>Proposez-vous des contrats de suivi annuel ?</h3>
+            <div class="faq-chevron">▾</div>
+          </div>
+          <div class="faq-reponse">
+            <div class="faq-reponse-inner">
+              <p>Oui. Pour les collectivités et les gestionnaires de patrimoine souhaitant un suivi régulier de leur parc bâti, je propose des contrats annuels ou pluriannuels avec tarif préférentiel.</p>
+              <p>Un contrat de suivi typique pour une commune comprend : une inspection annuelle de l'ensemble des bâtiments communaux, un rapport de synthèse avec classement des désordres par priorité, et une mission de nettoyage ciblée selon les besoins identifiés.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <h3>Quelle est votre zone d'intervention ?</h3>
+            <div class="faq-chevron">▾</div>
+          </div>
+          <div class="faq-reponse">
+            <div class="faq-reponse-inner">
+              <p>Basé à Boussens (31), j'interviens principalement en Haute-Garonne, Ariège, Hautes-Pyrénées et Gers. Déplacement sans frais dans un rayon de 30 km autour de Boussens.</p>
+              <ul>
+                <li>Haute-Garonne (31) : Saint-Gaudens, Cazères, Carbonne, Muret, Luchon, Montréjeau</li>
+                <li>Ariège (09) : Foix, Saint-Girons, Pamiers, Tarascon-sur-Ariège</li>
+                <li>Hautes-Pyrénées (65) : Tarbes, Lannemezan, Bagnères-de-Bigorre</li>
+                <li>Gers (32) : Auch, Lombez sur demande</li>
+              </ul>
+              <p>Au-delà de cette zone, déplacement sur devis — tarif attractif pour les missions groupées ou les contrats pluriannuels.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- CONTACT -->
+  <section>
+    <div class="container">
+      <div class="contact-block">
+        <h2>Votre question<br />n'est pas ici ?</h2>
+        <p>Appelez-moi directement. Vous parlez au pilote, pas à un standard. Je réponds à toutes les questions techniques, réglementaires ou tarifaires sans engagement.</p>
+        <div class="hero-cta">
+          <a href="tel:0759654934" class="btn-primary">07 59 65 49 34</a>
+          <a href="https://www.orizondrone.fr/#contact" class="btn-secondary">Formulaire de contact</a>
+        </div>
+        <div class="contact-info">
+          <a href="mailto:orizondrone@gmail.com">orizondrone@gmail.com</a>
+          <span style="color:rgba(15,118,110,0.25)">·</span>
+          <a href="/a-propos/">À propos d'OrizonDrone</a>
+          <span style="color:rgba(15,118,110,0.25)">·</span>
+          <a href="https://www.orizondrone.fr/">www.orizondrone.fr</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 OrizonDrone · Thomas · Boussens, Haute-Garonne (31) · <a href="https://www.orizondrone.fr/">Retour au site principal</a></p>
+  </footer>
+
+  <script>
+    document.querySelectorAll('.faq-question').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const item = btn.closest('.faq-item');
+        const isOpen = item.classList.contains('open');
+        document.querySelectorAll('.faq-item.open').forEach(el => el.classList.remove('open'));
+        if (!isOpen) item.classList.add('open');
+      });
+    });
+  </script>
+
+</body>
+</html>
