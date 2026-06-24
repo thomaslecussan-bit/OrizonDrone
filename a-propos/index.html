@@ -1,1 +1,314 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>À propos — Thomas, pilote drone professionnel | OrizonDrone</title>
+  <meta name="description" content="OrizonDrone, c'est Thomas — ancien informaticien reconverti pilote drone professionnel. Certifié CATS, formé en photogrammétrie et pulvérisation. Basé à Boussens (31)." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.orizondrone.fr/a-propos/" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Thomas Lécussan",
+    "jobTitle": "Télépilote drone professionnel",
+    "worksFor": {
+      "@type": "LocalBusiness",
+      "name": "OrizonDrone",
+      "url": "https://www.orizondrone.fr",
+      "telephone": "+33759654934",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Boussens",
+        "postalCode": "31360",
+        "addressCountry": "FR"
+      }
+    }
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --teal: #0F766E; --teal-light: #14B8A6; --teal-dim: #0d6b63;
+      --bg: #0a0a0a; --bg-card: #111111; --bg-card2: #161616;
+      --border: rgba(15,118,110,0.25); --text: #e5e5e5; --text-muted: #888; --white: #ffffff;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; font-size: 16px; }
 
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(10,10,10,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); padding: 0 2rem; height: 64px; display: flex; align-items: center; justify-content: space-between; }
+    .nav-logo { font-family: 'Orbitron', sans-serif; font-weight: 900; font-size: 1.1rem; color: var(--white); text-decoration: none; letter-spacing: 0.05em; }
+    .nav-logo span { color: var(--teal-light); }
+    .nav-links { display: flex; gap: 1.2rem; list-style: none; }
+    .nav-links a { color: var(--text-muted); text-decoration: none; font-size: 0.85rem; font-weight: 500; transition: color 0.2s; white-space: nowrap; }
+    .nav-links a:hover { color: var(--teal-light); }
+
+    .breadcrumb { padding: 6rem 2rem 0; max-width: 1100px; margin: 0 auto; }
+    .breadcrumb-nav { display: flex; align-items: center; gap: 0.5rem; font-size: 0.8rem; color: var(--text-muted); }
+    .breadcrumb-nav a { color: var(--text-muted); text-decoration: none; }
+    .breadcrumb-nav a:hover { color: var(--teal-light); }
+    .breadcrumb-nav span { color: var(--teal-light); }
+
+    .hero { min-height: 70vh; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 8rem 2rem 4rem; position: relative; overflow: hidden; }
+    .hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 80% 60% at 50% 40%, rgba(15,118,110,0.10) 0%, transparent 70%); pointer-events: none; }
+    .hero-eyebrow { font-family: 'Orbitron', sans-serif; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.2em; color: var(--teal-light); text-transform: uppercase; margin-bottom: 1.5rem; }
+    .hero h1 { font-family: 'Orbitron', sans-serif; font-weight: 900; font-size: clamp(2rem, 5vw, 3.2rem); line-height: 1.15; color: var(--white); margin-bottom: 1.5rem; max-width: 700px; }
+    .hero h1 span { color: var(--teal-light); }
+    .hero-sub { font-size: 1.1rem; color: var(--text-muted); max-width: 560px; line-height: 1.75; }
+
+    section { padding: 5rem 2rem; }
+    .container { max-width: 1100px; margin: 0 auto; }
+    .section-label { font-family: 'Orbitron', sans-serif; font-size: 0.65rem; font-weight: 700; letter-spacing: 0.2em; color: var(--teal-light); text-transform: uppercase; margin-bottom: 1rem; }
+    .section-title { font-family: 'Orbitron', sans-serif; font-weight: 900; font-size: clamp(1.4rem, 3vw, 2rem); color: var(--white); line-height: 1.2; margin-bottom: 2rem; }
+
+    .histoire { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; }
+    .histoire-texte p { color: var(--text-muted); line-height: 1.85; margin-bottom: 1.25rem; font-size: 0.97rem; }
+    .histoire-texte p:last-child { margin-bottom: 0; }
+    .histoire-texte strong { color: var(--white); font-weight: 600; }
+
+    .certifs { display: flex; flex-direction: column; gap: 1rem; }
+    .certif-item { background: var(--bg-card); border: 1px solid var(--border); border-radius: 10px; padding: 1.5rem; transition: border-color 0.2s; }
+    .certif-item:hover { border-color: var(--teal-light); }
+    .certif-label { font-family: 'Orbitron', sans-serif; font-size: 0.6rem; font-weight: 700; letter-spacing: 0.15em; color: var(--teal-light); text-transform: uppercase; margin-bottom: 0.5rem; }
+    .certif-item h4 { font-size: 0.95rem; font-weight: 600; color: var(--white); margin-bottom: 0.4rem; }
+    .certif-item p { color: var(--text-muted); font-size: 0.82rem; line-height: 1.55; }
+
+    .materiel-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem; }
+    .materiel-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 10px; padding: 2rem; }
+    .materiel-card h3 { font-size: 0.95rem; font-weight: 600; color: var(--white); margin-bottom: 1rem; padding-bottom: 0.75rem; border-bottom: 1px solid var(--border); }
+    .materiel-card ul { list-style: none; display: flex; flex-direction: column; gap: 0.5rem; }
+    .materiel-card li { color: var(--text-muted); font-size: 0.85rem; padding-left: 1.1rem; position: relative; line-height: 1.55; }
+    .materiel-card li::before { content: '▸'; position: absolute; left: 0; color: var(--teal-light); font-size: 0.7rem; top: 0.2em; }
+
+    .valeurs-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.5rem; }
+    .valeur-card { background: var(--bg-card2); border: 1px solid var(--border); border-radius: 10px; padding: 2rem; }
+    .valeur-card h4 { font-size: 0.95rem; font-weight: 600; color: var(--white); margin-bottom: 0.75rem; }
+    .valeur-card p { color: var(--text-muted); font-size: 0.87rem; line-height: 1.65; }
+
+    .contact-block { background: linear-gradient(135deg, rgba(15,118,110,0.08) 0%, transparent 60%); border: 1px solid var(--border); border-radius: 12px; padding: 3.5rem; text-align: center; }
+    .contact-block h2 { font-family: 'Orbitron', sans-serif; font-weight: 900; font-size: clamp(1.3rem, 3vw, 1.8rem); color: var(--white); margin-bottom: 1rem; }
+    .contact-block p { color: var(--text-muted); margin-bottom: 2rem; max-width: 480px; margin-left: auto; margin-right: auto; line-height: 1.7; }
+    .hero-cta { display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; }
+    .btn-primary { background: var(--teal); color: var(--white); padding: 0.85rem 2rem; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 0.95rem; transition: background 0.2s; }
+    .btn-primary:hover { background: var(--teal-dim); }
+    .btn-secondary { border: 1px solid var(--border); color: var(--text); padding: 0.85rem 2rem; border-radius: 6px; text-decoration: none; font-weight: 500; font-size: 0.95rem; }
+    .btn-secondary:hover { border-color: var(--teal-light); color: var(--teal-light); }
+    .contact-info { display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; margin-top: 2rem; padding-top: 2rem; border-top: 1px solid var(--border); }
+    .contact-info a { color: var(--text-muted); text-decoration: none; font-size: 0.9rem; }
+    .contact-info a:hover { color: var(--teal-light); }
+
+    .divider { height: 1px; background: var(--border); margin: 0 2rem; }
+    footer { border-top: 1px solid var(--border); padding: 2rem; text-align: center; color: var(--text-muted); font-size: 0.8rem; }
+    footer a { color: var(--teal-light); text-decoration: none; }
+    @media (max-width: 768px) { .nav-links { display: none; } .histoire { grid-template-columns: 1fr; gap: 2rem; } .contact-block { padding: 2rem; } }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="https://www.orizondrone.fr/" class="nav-logo">ORIZON<span>DRONE</span></a>
+    <ul class="nav-links">
+      <li><a href="/photogrammetrie-drone/">Photogrammétrie</a></li>
+      <li><a href="/inspection-drone/">Inspection</a></li>
+      <li><a href="/nettoyage-drone/">Nettoyage</a></li>
+      <li><a href="/captation-aerienne/">Captation</a></li>
+      <li><a href="https://www.orizondrone.fr/#contact" style="color:var(--teal-light)">Devis gratuit</a></li>
+    </ul>
+  </nav>
+
+  <div class="breadcrumb">
+    <nav class="breadcrumb-nav" aria-label="Fil d'Ariane">
+      <a href="https://www.orizondrone.fr/">OrizonDrone</a>
+      <span>›</span>
+      <span>À propos</span>
+    </nav>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero">
+    <p class="hero-eyebrow">Boussens · Comminges · Haute-Garonne</p>
+    <h1>Thomas,<br /><span>pilote drone professionnel</span></h1>
+    <p class="hero-sub">Ancien informaticien, passionné de technologie et de drones. J'ai transformé cette passion en métier — pour apporter aux collectivités, architectes et professionnels du territoire un outil de précision qu'ils n'avaient pas encore à portée.</p>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- HISTOIRE -->
+  <section>
+    <div class="container">
+      <p class="section-label">Mon parcours</p>
+      <h2 class="section-title">De l'informatique<br />au drone professionnel</h2>
+      <div class="histoire">
+        <div class="histoire-texte">
+          <p>Avant OrizonDrone, j'ai travaillé dans l'informatique. La technologie a toujours été au centre de ce que je fais — comprendre les outils, les maîtriser, les mettre au service de problèmes concrets.</p>
+          <p>Le drone est entré dans ma vie comme une passion. Rapidement, j'ai compris que ce n'était pas un jouet — c'était un outil professionnel d'une précision remarquable, capable de transformer la façon dont on inspecte un bâtiment, relève un terrain ou documente un patrimoine.</p>
+          <p>J'ai décidé d'en faire mon métier. <strong>Certification CATS, formation photogrammétrie, formation pulvérisation par drone</strong> — j'ai construit une expertise technique solide pour intervenir en toute légalité et avec un niveau de précision professionnel.</p>
+          <p>OrizonDrone est basé à <strong>Boussens, en plein Comminges</strong>. Ce n'est pas un hasard — c'est mon territoire. Je connais le bâti local, les contraintes du terrain pyrénéen, les interlocuteurs publics et privés. Je suis le prestataire drone du Comminges, pas un opérateur national qui sous-traite à distance.</p>
+        </div>
+        <div class="certifs">
+          <div class="certif-item">
+            <p class="certif-label">Certification</p>
+            <h4>CATS — Certificat d'Aptitude Théorique de Télépilote</h4>
+            <p>Certification européenne obligatoire pour les opérations professionnelles en catégorie ouverte et spécifique. Conformité totale avec la réglementation DGAC et EASA.</p>
+          </div>
+          <div class="certif-item">
+            <p class="certif-label">Formation spécialisée</p>
+            <h4>Photogrammétrie par drone</h4>
+            <p>Formation complète au traitement photogrammétrique — acquisition, alignement, nuage de points dense, orthophoto géoréférencée, modèle 3D. Pipeline maîtrisé de bout en bout.</p>
+          </div>
+          <div class="certif-item">
+            <p class="certif-label">Formation spécialisée</p>
+            <h4>Pulvérisation et nettoyage par drone</h4>
+            <p>Formation dédiée aux opérations de nettoyage et pulvérisation — configuration du système, produits homologués, protocoles de sécurité, zones interdites.</p>
+          </div>
+          <div class="certif-item">
+            <p class="certif-label">Conformité</p>
+            <h4>Déclaré DGAC · Assuré RC Pro</h4>
+            <p>Opérateur UAS déclaré auprès de la DGAC. Assurance responsabilité civile professionnelle spécifique activité drone. Toutes les autorisations de vol sont gérées en amont de chaque mission.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- MATÉRIEL -->
+  <section>
+    <div class="container">
+      <p class="section-label">Matériel</p>
+      <h2 class="section-title">Un drone industriel,<br />pas un drone grand public</h2>
+      <div class="materiel-grid">
+        <div class="materiel-card">
+          <h3>DJI Matrice 350 RTK</h3>
+          <ul>
+            <li>Plateforme industrielle certifiée</li>
+            <li>Résistance IP54 — pluie et poussière</li>
+            <li>Autonomie 55 minutes</li>
+            <li>Nacelles interchangeables selon mission</li>
+            <li>Positionnement RTK centimétrique</li>
+          </ul>
+        </div>
+        <div class="materiel-card">
+          <h3>Nacelle Zenmuse P1 — 45 MP</h3>
+          <ul>
+            <li>Capteur plein format 45 mégapixels</li>
+            <li>Objectif 35 mm calibré</li>
+            <li>Photogrammétrie haute précision</li>
+            <li>Orthophoto et modèle 3D haute densité</li>
+            <li>Compatible pipeline Metashape / ODM</li>
+          </ul>
+        </div>
+        <div class="materiel-card">
+          <h3>Nacelle Zenmuse H20</h3>
+          <ul>
+            <li>Caméra zoom haute résolution</li>
+            <li>Inspection à distance de sécurité</li>
+            <li>Identification de fissures millimétriques</li>
+            <li>Capteur thermique disponible</li>
+            <li>Idéale pour inspection de façades et toitures</li>
+          </ul>
+        </div>
+        <div class="materiel-card">
+          <h3>Système de nettoyage</h3>
+          <ul>
+            <li>Rampe 3 buses sous le drone</li>
+            <li>Alimentation depuis le sol par tuyau</li>
+            <li>Produits fongicides biodégradables</li>
+            <li>Portée jusqu'à 50 m de hauteur</li>
+            <li>Débit réglable selon le support</li>
+          </ul>
+        </div>
+        <div class="materiel-card">
+          <h3>Réseau RTK Centipède</h3>
+          <ul>
+            <li>Correction RTK en temps réel</li>
+            <li>Précision centimétrique sans GCP</li>
+            <li>Couverture Comminges et départements voisins</li>
+            <li>Données géoréférencées exploitables directement</li>
+            <li>Gain de temps significatif sur le terrain</li>
+          </ul>
+        </div>
+        <div class="materiel-card">
+          <h3>Logiciels de traitement</h3>
+          <ul>
+            <li>Agisoft Metashape Pro</li>
+            <li>OpenDroneMap</li>
+            <li>QGIS pour l'analyse géospatiale</li>
+            <li>One3D pour les jumeaux numériques interactifs</li>
+            <li>Exports : GeoTIFF, LAS, OBJ, RCS, FBX</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- VALEURS -->
+  <section>
+    <div class="container">
+      <p class="section-label">Ce qui me différencie</p>
+      <h2 class="section-title">Pourquoi choisir<br />OrizonDrone</h2>
+      <div class="valeurs-grid">
+        <div class="valeur-card">
+          <h4>Ancrage local réel</h4>
+          <p>Basé à Boussens depuis le début. Je connais le territoire, les élus, le bâti du Comminges et les contraintes de vol pyrénéennes. Pas un opérateur national — un prestataire de proximité.</p>
+        </div>
+        <div class="valeur-card">
+          <h4>Maîtrise technique de bout en bout</h4>
+          <p>Je pilote, je traite les données et je livre les fichiers finaux. Aucune sous-traitance du traitement photogrammétrique ou de la rédaction des rapports — vous avez un interlocuteur unique sur toute la chaîne.</p>
+        </div>
+        <div class="valeur-card">
+          <h4>Livrables exploitables directement</h4>
+          <p>Orthophotos géoréférencées, nuages de points, modèles 3D, rapports annotés — tout est livré prêt à l'emploi dans vos logiciels métiers. Pas de fichiers bruts à retraiter.</p>
+        </div>
+        <div class="valeur-card">
+          <h4>Conformité sans faille</h4>
+          <p>CATS, DGAC, assurance RC Pro, gestion des autorisations de vol — chaque mission est préparée et exécutée dans le cadre légal. Vous n'avez aucune démarche administrative à gérer.</p>
+        </div>
+        <div class="valeur-card">
+          <h4>Réactivité</h4>
+          <p>Devis sous 24h, intervention possible le jour même pour les urgences dans un rayon de 30 km. Pas de délai de plusieurs semaines pour planifier une mission simple.</p>
+        </div>
+        <div class="valeur-card">
+          <h4>Passion de la précision</h4>
+          <p>L'informatique m'a appris que les détails comptent. Cette rigueur, je l'applique à chaque mission — de la préparation du plan de vol jusqu'à la vérification finale des livrables avant livraison.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- CONTACT -->
+  <section>
+    <div class="container">
+      <div class="contact-block">
+        <h2>On se parle ?</h2>
+        <p>Je réponds à tous les appels et messages personnellement. Pas de standard, pas de commercial — vous parlez directement au pilote qui interviendra sur votre site.</p>
+        <div class="hero-cta">
+          <a href="tel:0759654934" class="btn-primary">07 59 65 49 34</a>
+          <a href="https://www.orizondrone.fr/#contact" class="btn-secondary">Formulaire de contact</a>
+        </div>
+        <div class="contact-info">
+          <a href="mailto:orizondrone@gmail.com">orizondrone@gmail.com</a>
+          <span style="color:rgba(15,118,110,0.25)">·</span>
+          <span>Boussens (31360) — Comminges</span>
+          <span style="color:rgba(15,118,110,0.25)">·</span>
+          <a href="https://www.orizondrone.fr/">www.orizondrone.fr</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 OrizonDrone · Thomas · Boussens, Haute-Garonne (31) · <a href="https://www.orizondrone.fr/">Retour au site principal</a></p>
+  </footer>
+
+</body>
+</html>
