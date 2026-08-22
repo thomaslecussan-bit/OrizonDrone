@@ -1,1 +1,71 @@
-
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Informations légales | OrizonDrone</title>
+  <meta name="robots" content="noindex, follow" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root { --teal: #0F766E; --teal-light: #14B8A6; --bg: #0a0a0a; --bg-card: #111111; --border: rgba(15,118,110,0.25); --text: #e5e5e5; --text-muted: #888; --white: #ffffff; }
+    body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; font-size: 16px; min-height: 100vh; display: flex; flex-direction: column; }
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(10,10,10,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); padding: 0 2rem; height: 64px; display: flex; align-items: center; }
+    .nav-logo { font-family: 'Orbitron', sans-serif; font-weight: 900; font-size: 1.1rem; color: var(--white); text-decoration: none; }
+    .nav-logo span { color: var(--teal-light); }
+    main { flex: 1; max-width: 700px; margin: 0 auto; padding: 7rem 2rem 4rem; width: 100%; }
+    h1 { font-family: 'Orbitron', sans-serif; font-weight: 900; font-size: 1.5rem; color: var(--white); margin-bottom: 0.75rem; }
+    .sub { color: var(--text-muted); font-size: 0.9rem; margin-bottom: 3rem; }
+    .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    .card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 10px; padding: 1.75rem; text-decoration: none; display: flex; flex-direction: column; gap: 0.6rem; transition: border-color 0.2s; }
+    .card:hover { border-color: var(--teal-light); }
+    .card-icon { font-size: 1.4rem; }
+    .card h2 { font-size: 0.95rem; font-weight: 600; color: var(--white); }
+    .card p { color: var(--text-muted); font-size: 0.82rem; line-height: 1.6; flex: 1; }
+    .card-cta { font-size: 0.8rem; color: var(--teal-light); font-weight: 500; }
+    footer { border-top: 1px solid var(--border); padding: 1.5rem 2rem; text-align: center; color: var(--text-muted); font-size: 0.8rem; }
+    footer a { color: var(--teal-light); text-decoration: none; margin: 0 0.5rem; }
+    @media (max-width: 500px) { .grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="https://www.orizondrone.fr/" class="nav-logo">ORIZON<span>DRONE</span></a>
+  </nav>
+  <main>
+    <h1>Informations légales</h1>
+    <p class="sub">Documents légaux et réglementaires relatifs à OrizonDrone et au site orizondrone.fr.</p>
+    <div class="grid">
+      <a href="/mentions-legales/" class="card">
+        <div class="card-icon">🏢</div>
+        <h2>Mentions légales</h2>
+        <p>Éditeur, hébergeur, propriété intellectuelle.</p>
+        <span class="card-cta">Consulter →</span>
+      </a>
+      <a href="/politique-confidentialite/" class="card">
+        <div class="card-icon">🔒</div>
+        <h2>Politique de confidentialité</h2>
+        <p>Données collectées, droits RGPD, durées de conservation.</p>
+        <span class="card-cta">Consulter →</span>
+      </a>
+      <a href="/cookies/" class="card">
+        <div class="card-icon">🍪</div>
+        <h2>Cookies</h2>
+        <p>Cookies utilisés sur le site et comment les gérer.</p>
+        <span class="card-cta">Consulter →</span>
+      </a>
+      <a href="/cgv/" class="card">
+        <div class="card-icon">📋</div>
+        <h2>CGV</h2>
+        <p>Conditions applicables à toutes les prestations drone.</p>
+        <span class="card-cta">Consulter →</span>
+      </a>
+    </div>
+  </main>
+  <footer>
+    <a href="https://www.orizondrone.fr/">Retour au site</a>
+  </footer>
+</body>
+</html>
