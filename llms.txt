@@ -1,0 +1,38 @@
+# OrizonDrone
+
+> OrizonDrone est une entreprise de photogrammétrie et de relevé 3D par drone basée à Boussens (31360), dans le Comminges, en Haute-Garonne. Elle est dirigée par Thomas Lécussan, télépilote de drone certifié et formé à la photogrammétrie. OrizonDrone produit des modèles 3D, des nuages de points, des orthophotos et des modèles numériques de terrain géoréférencés pour les architectes, bureaux d'études, collectivités, géomètres, entreprises du BTP et acteurs du patrimoine.
+
+## Prestations
+
+- Photogrammétrie et relevé 3D de bâtiments et de sites : modèle 3D texturé (OBJ, RCS, FBX), nuage de points (LAS, LAZ), orthophoto (GeoTIFF), MNT/MNS, courbes de niveau, plan 2D (DXF, SHP), mesures et rapport PDF.
+- Consultation des livrables sans logiciel professionnel : lien 3D dans le navigateur, ou visionneuse gratuite Orizon3D (Windows, Mac, Linux).
+- Autres prestations : inspection technique par drone, nettoyage de toitures et façades par drone, captation aérienne.
+
+## Matériel et méthode
+
+- Drones : DJI Matrice 4E (module RTK) et DJI Matrice 350 RTK avec caméra Zenmuse P1 (plein format 45 MP) et Zenmuse H20.
+- Positionnement RTK (réseau Centipède) : photos géoréférencées au centimètre.
+- Traitement : Agisoft Metashape Professional ; mise en ligne et partage des jumeaux numériques avec One3D.
+
+## Zone d'intervention
+
+Haute-Garonne (31), Ariège (09), Hautes-Pyrénées (65), Gers (32), Toulouse et son agglomération. Au-delà sur demande. Villes desservies régulièrement : Saint-Gaudens, Cazères, Carbonne, Muret, Montréjeau, Luchon, Foix, Saint-Girons.
+
+## Devis et contact
+
+- Devis gratuit sous 48 h, établi à partir d'une grille tarifaire ajustée à chaque demande (surface et accès du site, livrables, déplacement).
+- Téléphone : 07 59 65 49 34
+- Email : orizondrone@gmail.com
+- Adresse : Boussens (31360), Haute-Garonne, France
+- LinkedIn : https://www.linkedin.com/in/thomas-l%C3%A9cussan-604b04361/
+
+## Pages principales
+
+- [Accueil](https://www.orizondrone.fr/) : photogrammétrie et modèles 3D par drone
+- [Photogrammétrie par drone](https://www.orizondrone.fr/photogrammetrie-drone/)
+- [Inspection technique par drone](https://www.orizondrone.fr/inspection-drone/)
+- [Nettoyage par drone](https://www.orizondrone.fr/nettoyage-drone/)
+- [Captation aérienne](https://www.orizondrone.fr/captation-aerienne/)
+- [Réalisations](https://www.orizondrone.fr/realisations/) : exemples de relevés 3D par drone
+- [Questions fréquentes](https://www.orizondrone.fr/faq/)
+- [À propos de Thomas Lécussan](https://www.orizondrone.fr/a-propos/)

@@ -3,33 +3,154 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Photogrammétrie par Drone — Orthophoto & Modèle 3D | OrizonDrone</title>
-  <meta name="description" content='OrizonDrone réalise vos relevés photogrammétriques par drone en Haute-Garonne, Ariège et départements voisins. DJI Matrice 350 RTK, précision centimétrique, livrables clé en main. Devis gratuit.' />
+  <title>Photogrammétrie par drone et relevé 3D | OrizonDrone</title>
+  <meta name="description" content="Modèle 3D, nuage de points, orthophoto et MNT par drone RTK, livrés dans vos formats ou à consulter sans logiciel. Haute-Garonne, Ariège, 65, Gers." />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://www.orizondrone.fr/photogrammetrie-drone/" />
-  <meta property="og:title" content="Photogrammétrie par Drone — Orthophoto & Modèle 3D | OrizonDrone" />
-  <meta property="og:description" content='OrizonDrone réalise vos relevés photogrammétriques par drone en Haute-Garonne, Ariège et départements voisins. DJI Matrice 350 RTK, précision centimétrique, livrables clé en main. Devis gratuit.' />
+  <meta property="og:title" content="Photogrammétrie par drone et relevé 3D | OrizonDrone" />
+  <meta property="og:description" content="Modèle 3D, nuage de points, orthophoto et MNT par drone RTK, livrés dans vos formats ou à consulter sans logiciel. Haute-Garonne, Ariège, 65, Gers." />
   <meta property="og:url" content="https://www.orizondrone.fr/photogrammetrie-drone/" />
   <meta property="og:type" content="website" />
   <script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
   {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    "name": "Photogrammétrie par drone",
-    "provider": {
-      "@type": "LocalBusiness",
-      "name": "OrizonDrone",
-      "telephone": "+33759654934",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Boussens",
-        "postalCode": "31360",
-        "addressCountry": "FR"
-      }
+   "@type": "Service",
+   "@id": "https://www.orizondrone.fr/photogrammetrie-drone/#service",
+   "name": "Photogrammétrie et relevé 3D par drone",
+   "serviceType": "Photogrammétrie par drone",
+   "description": "Relevé 3D de bâtiments et de sites par drone RTK : modèle 3D texturé, nuage de points, orthophoto, MNT et mesures, livrés dans les formats métiers ou consultables sans logiciel.",
+   "provider": {
+    "@type": "ProfessionalService",
+    "@id": "https://www.orizondrone.fr/#entreprise",
+    "name": "OrizonDrone",
+    "telephone": "+33759654934",
+    "url": "https://www.orizondrone.fr/",
+    "address": {
+     "@type": "PostalAddress",
+     "addressLocality": "Boussens",
+     "postalCode": "31360",
+     "addressRegion": "Haute-Garonne",
+     "addressCountry": "FR"
+    }
+   },
+   "areaServed": [
+    {
+     "@type": "AdministrativeArea",
+     "name": "Haute-Garonne"
     },
-    "areaServed": ["Haute-Garonne", "Ariège", "Hautes-Pyrénées", "Gers"],
-    "url": "https://www.orizondrone.fr/photogrammetrie-drone/"
+    {
+     "@type": "AdministrativeArea",
+     "name": "Ariège"
+    },
+    {
+     "@type": "AdministrativeArea",
+     "name": "Hautes-Pyrénées"
+    },
+    {
+     "@type": "AdministrativeArea",
+     "name": "Gers"
+    }
+   ],
+   "url": "https://www.orizondrone.fr/photogrammetrie-drone/"
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "OrizonDrone",
+     "item": "https://www.orizondrone.fr/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Photogrammétrie par drone",
+     "item": "https://www.orizondrone.fr/photogrammetrie-drone/"
+    }
+   ]
+  },
+  {
+   "@type": "FAQPage",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "Qu'est-ce que la photogrammétrie par drone ?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "La photogrammétrie par drone consiste à photographier un bâtiment ou un site sous tous les angles, avec des centaines de photos qui se recouvrent, puis à les assembler par calcul. Le logiciel retrouve les mêmes points d'une photo à l'autre et reconstruit leur position dans l'espace. On obtient un nuage de points, un modèle 3D texturé et une orthophoto à l'échelle, sur lesquels on peut mesurer des distances, des surfaces et des volumes."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Quelle précision peut-on attendre ?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Les drones utilisés sont équipés du positionnement RTK, relié au réseau Centipède : chaque photo est géoréférencée pendant le vol. La résolution au sol est en général de l'ordre de 1 à 3 cm par pixel, selon la hauteur de vol et la caméra. La précision finale dépend du site, de la végétation, des surfaces (vitres, toitures métalliques) et de la présence ou non de points de contrôle au sol. Elle est discutée avant la mission et indiquée dans le devis. Quand un levé de géomètre-expert est réglementairement obligatoire, la photogrammétrie le complète sans le remplacer."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Photogrammétrie ou LiDAR : quelle différence ?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "La photogrammétrie reconstruit le relief à partir de photos : elle donne un rendu réaliste et texturé, idéal pour les bâtiments, les façades, les toitures et les sites dégagés. Le LiDAR mesure le terrain avec un laser et peut passer en partie à travers la végétation, ce qui le rend plus adapté aux terrains très boisés. OrizonDrone réalise des relevés par photogrammétrie. Si votre projet relève plutôt du LiDAR, je vous le dirai franchement avant de faire un devis."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Quels fichiers vais-je recevoir ?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Selon votre projet : modèle 3D texturé (OBJ, FBX, RCS), nuage de points (LAS, LAZ), orthophoto (GeoTIFF), modèle numérique de terrain ou de surface, courbes de niveau, plan 2D (DXF, SHP) et rapport PDF avec mesures. Avant la mission, je vous demande quels logiciels vous utilisez (AutoCAD, Revit, ArchiCAD, SketchUp, QGIS…) pour livrer directement dans le bon format."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Je n'ai pas de logiciel 3D : comment consulter le modèle ?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Deux solutions, sans compétence technique. Le modèle peut être mis en ligne et consulté depuis un simple lien, dans le navigateur d'un ordinateur, d'une tablette ou d'un téléphone. Vous pouvez aussi utiliser Orizon3D, une visionneuse gratuite pour Windows, Mac et Linux, qui ouvre les modèles 3D, les nuages de points et les orthophotos en quelques clics."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Combien de temps entre le vol et la livraison ?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Le vol lui-même dure de quelques dizaines de minutes à une demi-journée selon la taille du site. Le traitement des photos et la préparation des fichiers prennent ensuite quelques jours. Le délai exact dépend du volume de données et des livrables demandés : il est indiqué dans le devis."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Peut-on relever l'intérieur d'un bâtiment ?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "La prestation porte sur l'extérieur : toitures, façades, abords et terrain. Pour un besoin en intérieur, contactez-moi : je vous dirai si c'est faisable et avec quelle méthode, au cas par cas."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "La météo peut-elle empêcher la mission ?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Oui. Pour des photos exploitables, il faut éviter la pluie, le brouillard et le vent fort. Un ciel couvert et homogène est souvent idéal, car il limite les ombres marquées. Je surveille la météo les jours précédents et je vous préviens si un report est nécessaire."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Intervenez-vous sur des monuments et des édifices anciens ?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Oui. Le relevé par drone se fait sans aucun contact avec l'édifice, sans échafaudage et sans ancrage dans la maçonnerie. C'est une bonne base pour préparer une étude ou un chantier de restauration. Les autorisations de vol nécessaires sont obtenues avant l'intervention, et l'accord du propriétaire ou du gestionnaire du site est demandé au préalable."
+     }
+    }
+   ]
   }
+ ]
+}
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -110,7 +231,36 @@
     footer { border-top: 1px solid var(--border); padding: 2rem; text-align: center; color: var(--text-muted); font-size: 0.8rem; }
     footer a { color: var(--teal-light); text-decoration: none; }
     @media (max-width: 768px) { .nav-links { display: none; } .deux-col { grid-template-columns: 1fr; } .contact-block { padding: 2rem; } }
+    .def p{color:var(--text);font-size:1.05rem;line-height:1.8;margin:0}
+    .hl{border-color:var(--teal-light)}
+    .h3w{font-size:1.1rem;font-weight:600;color:var(--white);margin:.2rem 0 .6rem}
+    .block-info p{color:var(--text-muted);line-height:1.75}
+    .pst{list-style:none;display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem}
+    .pst li{border-top:2px solid var(--teal);padding-top:1.2rem}
+    .pst span{font-family:'Orbitron',sans-serif;font-size:.75rem;color:var(--teal-light);letter-spacing:.15em}
+    .pst h3{color:var(--white);font-size:1.05rem;margin:.5rem 0}
+    .pst p{color:var(--text-muted);font-size:.9rem;line-height:1.65}
+    .more{margin-top:2rem;color:var(--text-muted)}.more a{color:var(--teal-light)}
+    .pfs{max-width:820px}
+    .pf{border:1px solid var(--border);border-radius:8px;margin-bottom:.75rem;background:var(--bg-card)}
+    .pf summary{cursor:pointer;list-style:none;padding:1.15rem 3rem 1.15rem 1.5rem;position:relative}
+    .pf summary::-webkit-details-marker{display:none}
+    .pf summary::after{content:'+';position:absolute;right:1.4rem;top:1rem;color:var(--teal-light);font-size:1.3rem;transition:transform .25s}
+    .pf[open] summary::after{transform:rotate(45deg)}
+    .pf summary h3{font-size:.98rem;font-weight:600;color:var(--white);line-height:1.4}
+    .pf p{padding:0 1.5rem 1rem;color:var(--text-muted);line-height:1.75;font-size:.93rem}
+    .pf summary:focus-visible{outline:2px solid var(--teal-light);outline-offset:2px}
+    @media (max-width:900px){.pst{grid-template-columns:1fr 1fr}}
+    @media (max-width:560px){.pst{grid-template-columns:1fr}}
 </style>
+<meta property="og:site_name" content="OrizonDrone">
+<meta property="og:image" content="https://www.orizondrone.fr/og-image.jpg">
+<meta property="og:locale" content="fr_FR">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon-192.png" type="image/png" sizes="192x192">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="theme-color" content="#050606">
 </head>
 <body>
 
@@ -135,12 +285,12 @@
 
   <section class="hero">
     <p class="hero-eyebrow">Haute-Garonne · Ariège · Hautes-Pyrénées · Gers</p>
-    <h1>Photogrammétrie par drone<br /><span>Orthophoto & relevé 3D</span></h1>
-    <p class="hero-sub">Relevés aériens précis pour collectivités, architectes et professionnels du BTP. DJI Matrice 350 RTK, nacelle Zenmuse P1 45 MP, réseau RTK Centipède — précision centimétrique sans points d'appui au sol.</p>
-    <div class="hero-badges"><span class="badge">Zenmuse P1 — 45 MP</span><span class="badge">RTK centimétrique</span><span class="badge">Certifié CATS · DGAC</span><span class="badge">GeoTIFF · LAS · OBJ · RCS</span></div>
+    <h1>Photogrammétrie par drone<br /><span>Relevé 3D de vos bâtiments et sites</span></h1>
+    <p class="hero-sub">Modèles 3D, nuages de points, orthophotos et modèles de terrain géoréférencés, pour les architectes, bureaux d'études, collectivités, géomètres et entreprises du BTP. Livrés dans vos formats, ou consultables sans aucun logiciel.</p>
+    <div class="hero-badges"><span class="badge">DJI Matrice 4E · Matrice 350 RTK</span><span class="badge">Géoréférencement RTK</span><span class="badge">OBJ · LAS · GeoTIFF · RCS</span><span class="badge">Visionneuse Orizon3D</span></div>
     <div class="hero-cta">
-      <a href="tel:0759654934" class="btn-primary">07 59 65 49 34</a>
-      <a href="https://www.orizondrone.fr/#contact" class="btn-secondary">Demander un devis</a>
+      <a href="https://www.orizondrone.fr/#contact" class="btn-primary">Demander un devis</a>
+      <a href="tel:0759654934" class="btn-secondary">07 59 65 49 34</a>
     </div>
   </section>
 
@@ -148,34 +298,29 @@
 
   <section>
     <div class="container">
-      <p class="section-label">Ce que vous obtenez</p>
-      <h2 class="section-title">Des données mesurables,<br />exploitables directement</h2>
-      <p class="section-intro">Pas de fichiers bruts à retraiter. Chaque mission photogrammétrique produit des livrables directement intégrables dans vos outils CAO, SIG ou BIM. Précision centimétrique obtenue via le réseau RTK Centipède — sans points d'appui au sol, sans perte de temps sur le terrain.</p>
+      <p class="section-label">En bref</p>
+      <h2 class="section-title">Qu'est-ce que la photogrammétrie<br />par drone ?</h2>
+      <div class="block-info def">
+        <p>La photogrammétrie par drone consiste à photographier un bâtiment ou un site sous tous les angles, puis à assembler ces photos par calcul pour reconstruire l'objet en 3D, à l'échelle réelle. Avec un drone équipé du positionnement RTK, chaque photo est géoréférencée pendant le vol : le modèle obtenu se mesure, se coupe et s'importe directement dans les logiciels de dessin, de BIM et de SIG.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <section>
+    <div class="container">
+      <p class="section-label">Ce que vous recevez</p>
+      <h2 class="section-title">Des livrables pour<br />chaque usage</h2>
+      <p class="section-intro">Chaque mission est livrée dans les formats dont vos équipes ont besoin. Je vous demande avant le vol quels logiciels vous utilisez.</p>
       <div class="cards-grid">
-        <div class="card">
-          <p class="card-num">01</p>
-          <h3>Orthophoto géoréférencée</h3>
-          <p>Image aérienne corrigée géométriquement, mesurable au centimètre. Format GeoTIFF compatible SIG. Utilisable pour calcul de surfaces, suivi de chantier, dossier PLU ou permis d'aménager.</p>
-          <div class="tags"><span class="tag">GeoTIFF</span><span class="tag">Mesurable</span><span class="tag">Compatible SIG</span></div>
-        </div>
-        <div class="card">
-          <p class="card-num">02</p>
-          <h3>Modèle 3D haute densité</h3>
-          <p>Reconstruction 3D texturée du bâtiment ou du terrain. Exportable en OBJ, FBX ou format natif. Base fiable pour les études de réhabilitation, les diagnostics patrimoniaux ou les rendus architecturaux.</p>
-          <div class="tags"><span class="tag">OBJ · FBX</span><span class="tag">Texturé</span><span class="tag">Réhabilitation</span></div>
-        </div>
-        <div class="card">
-          <p class="card-num">03</p>
-          <h3>Nuage de points LAS</h3>
-          <p>Nuage de points haute densité compatible avec tous les logiciels de traitement (AutoCAD, Revit, CloudCompare). Précision centimétrique, coloration RVB intégrée.</p>
-          <div class="tags"><span class="tag">LAS · RCS</span><span class="tag">AutoCAD · Revit</span><span class="tag">Précision cm</span></div>
-        </div>
-        <div class="card">
-          <p class="card-num">04</p>
-          <h3>Jumeau numérique interactif</h3>
-          <p>Livrable Premium : modèle 3D interactif en ligne via One3D. Navigable depuis un navigateur, partageable avec vos équipes ou votre maître d'ouvrage sans logiciel spécifique.</p>
-          <div class="tags"><span class="tag">One3D</span><span class="tag">Navigable en ligne</span><span class="tag">Partageable</span></div>
-        </div></div>
+        <div class="card"><p class="card-num">MODÈLE 3D</p><h3>Modèle 3D texturé</h3><p>Reconstruction réaliste du bâtiment ou du site, avec la texture des photos. Base de travail pour une réhabilitation, une étude patrimoniale ou une présentation de projet.</p><div class="tags"><span class="tag">OBJ</span><span class="tag">FBX</span><span class="tag">RCS</span></div></div>
+        <div class="card"><p class="card-num">NUAGE DE POINTS</p><h3>Nuage de points coloré</h3><p>Des millions de points géoréférencés, à importer dans AutoCAD, Revit, ArchiCAD ou CloudCompare pour dessiner l'existant, faire des coupes et des élévations.</p><div class="tags"><span class="tag">LAS</span><span class="tag">LAZ</span><span class="tag">E57 sur demande</span></div></div>
+        <div class="card"><p class="card-num">ORTHOPHOTO</p><h3>Orthophoto géoréférencée</h3><p>Vue aérienne redressée, sans déformation, en Lambert 93. On y mesure directement des distances et des surfaces. Utile pour un dossier d'urbanisme, un plan masse ou un suivi de chantier.</p><div class="tags"><span class="tag">GeoTIFF</span><span class="tag">Lambert 93</span></div></div>
+        <div class="card"><p class="card-num">TOPOGRAPHIE</p><h3>MNT, MNS et courbes de niveau</h3><p>Modèles numériques de terrain et de surface, courbes de niveau et plan 2D, pour étudier un terrain, une pente ou un volume de terrassement.</p><div class="tags"><span class="tag">GeoTIFF</span><span class="tag">DXF</span><span class="tag">SHP</span></div></div>
+        <div class="card"><p class="card-num">MESURES</p><h3>Surfaces, volumes et rapport</h3><p>Surfaces de toiture, linéaires de façade, volumes de stock ou de déblais, calculés sur le modèle et réunis dans un rapport PDF illustré.</p><div class="tags"><span class="tag">PDF</span><span class="tag">Métrés</span></div></div>
+        <div class="card"><p class="card-num">JUMEAU NUMÉRIQUE</p><h3>Modèle en ligne à partager</h3><p>Le modèle 3D mis en ligne et consultable depuis un simple lien. Pratique pour le présenter à des élus, un client ou un maître d'ouvrage.</p><div class="tags"><span class="tag">Lien web</span><span class="tag">One3D</span></div></div>
+      </div>
     </div>
   </section>
 
@@ -183,10 +328,61 @@
 
   <section>
     <div class="container">
-      <p class="section-label">À qui s'adresse cette prestation</p>
-      <h2 class="section-title">Collectivités, architectes<br />et professionnels du BTP</h2>
-      <div class="block-info">
-        <p>La photogrammétrie par drone répond à des besoins précis : disposer d'un relevé de l'existant précis et rapide, sans mobiliser une équipe de géomètres au sol pendant des jours. Pour les collectivités, c'est un outil de diagnostic patrimonial. Pour les architectes, c'est la base de tout projet de réhabilitation. Pour les maîtres d'œuvre, c'est le suivi de chantier sans ambiguïté.</p><p>OrizonDrone intervient en Haute-Garonne, Ariège, Hautes-Pyrénées et Gers avec le DJI Matrice 350 RTK — un drone industriel certifié, résistant aux intempéries, capable de couvrir de grandes surfaces en une demi-journée.</p>
+      <p class="section-label">Sans logiciel professionnel</p>
+      <h2 class="section-title">Tout le monde peut<br />consulter le résultat</h2>
+      <p class="section-intro">Bureau d'études équipé ou mairie sans logiciel 3D : je m'adapte à vos moyens. Les équipes techniques reçoivent les formats natifs, et tous les autres peuvent regarder le modèle simplement.</p>
+      <div class="deux-col">
+        <div class="block-info"><p class="card-num">SANS RIEN INSTALLER</p><h3 class="h3w">Dans le navigateur</h3><p>Un lien suffit pour visiter le modèle depuis un ordinateur, une tablette ou un téléphone, tourner autour, zoomer et mesurer.</p></div>
+        <div class="block-info hl"><p class="card-num">WINDOWS · MAC · LINUX</p><h3 class="h3w">Avec la visionneuse Orizon3D</h3><p>Une application gratuite qui s'installe en quelques clics et ouvre les modèles 3D, les nuages de points et les orthophotos livrés, sans logiciel professionnel ni compétence technique.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <section>
+    <div class="container">
+      <p class="section-label">La méthode</p>
+      <h2 class="section-title">Du premier appel<br />à la livraison</h2>
+      <ol class="pst">
+        <li><span>01</span><h3>Préparation</h3><p>On définit ensemble le périmètre, la précision attendue et les livrables. Je vérifie la zone de vol et j'obtiens les autorisations nécessaires.</p></li>
+        <li><span>02</span><h3>Vol RTK</h3><p>Plan de vol automatique avec un fort recouvrement entre les photos, complété par des vues obliques sur les façades. Chaque photo est géoréférencée pendant le vol.</p></li>
+        <li><span>03</span><h3>Traitement</h3><p>Alignement des photos, nuage de points dense, maillage, texture et exports, sous Agisoft Metashape Professional. Je contrôle le résultat avant livraison.</p></li>
+        <li><span>04</span><h3>Livraison</h3><p>Fichiers aux formats demandés, lien de consultation en ligne si besoin, et un échange pour vous aider à les prendre en main.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <section>
+    <div class="container">
+      <p class="section-label">Pour qui</p>
+      <h2 class="section-title">Des usages concrets</h2>
+      <div class="cards-grid">
+        <div class="card"><h3>Architectes et maîtres d'œuvre</h3><p>Relevé de l'existant avant une réhabilitation, une extension ou un permis de construire. Le nuage de points sert de base pour dessiner façades, coupes et toitures.</p></div>
+        <div class="card"><h3>Bureaux d'études</h3><p>Données géoréférencées pour les études structure, thermique ou VRD, et modèles de terrain pour les études de pente et de ruissellement.</p></div>
+        <div class="card"><h3>Collectivités</h3><p>État des lieux des bâtiments communaux, orthophotos pour les projets d'aménagement, modèles 3D faciles à présenter en conseil municipal.</p></div>
+        <div class="card"><h3>Géomètres et BTP</h3><p>Calcul de volumes, suivi de chantier avant, pendant et après travaux, orthophotos de grandes emprises en complément des levés au sol.</p></div>
+        <div class="card"><h3>Patrimoine</h3><p>Documentation d'églises, d'abbayes, de châteaux et de bâti ancien, sans contact avec l'édifice, pour préparer une étude ou un chantier de restauration.</p></div>
+      </div>
+      <p class="more">Voir des exemples : <a href="/realisations/">nos réalisations en 3D</a></p>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <section>
+    <div class="container">
+      <p class="section-label">Matériel et logiciels</p>
+      <h2 class="section-title">Une chaîne pro,<br />du vol au fichier</h2>
+      <div class="livrables-grid">
+        <div class="livrable-item"><h4>DJI Matrice 4E</h4><p>Drone compact avec module RTK et caméra grand angle à obturateur mécanique, rapide à déployer.</p></div>
+        <div class="livrable-item"><h4>DJI Matrice 350 RTK + Zenmuse P1</h4><p>Plateforme industrielle et capteur plein format 45 MP dédié à la photogrammétrie.</p></div>
+        <div class="livrable-item"><h4>RTK · réseau Centipède</h4><p>Correction de position en temps réel pour géoréférencer chaque photo.</p></div>
+        <div class="livrable-item"><h4>Agisoft Metashape Pro</h4><p>Traitement photogrammétrique : nuage dense, maillage, orthophoto, exports.</p></div>
+        <div class="livrable-item"><h4>One3D</h4><p>Mise en ligne et partage des modèles 3D.</p></div>
+        <div class="livrable-item"><h4>Orizon3D</h4><p>Visionneuse gratuite pour consulter les livrables sur Windows, Mac et Linux.</p></div>
       </div>
     </div>
   </section>
@@ -199,8 +395,8 @@
       <h2 class="section-title">Haute-Garonne, Ariège<br />et départements voisins</h2>
       <div class="deux-col">
         <div>
-          <p>Intervention prioritaire dans le bassin Comminges–Pyrénées. Déplacement sans frais dans un rayon de 30 km autour de Boussens (31). Au-delà, tarif déplacement sur devis.</p>
-          <p>Collectivités, architectes, BTP, industriels — devis gratuit sous 24h.</p>
+          <p>Basé à Boussens, j'interviens en priorité dans le Comminges et les Pyrénées, et plus largement en Haute-Garonne, en Ariège, dans les Hautes-Pyrénées et dans le Gers. Déplacement sans frais dans un rayon de 30 km autour de Boussens (31). Au-delà, tarif déplacement sur devis.</p>
+          <p>Collectivités, architectes, BTP, industriels — devis gratuit sous 48 h.</p>
         </div>
         <ul class="liste-zones">
           <li>Haute-Garonne (31) — Saint-Gaudens, Cazères, Muret, Carbonne, Luchon</li>
@@ -258,6 +454,27 @@
 
   <div class="divider"></div>
 
+  <section id="questions">
+    <div class="container">
+      <p class="section-label">Questions fréquentes</p>
+      <h2 class="section-title">Vos questions sur<br />la photogrammétrie</h2>
+      <div class="pfs">
+        <details class="pf"><summary><h3>Qu&#x27;est-ce que la photogrammétrie par drone ?</h3></summary><p>La photogrammétrie par drone consiste à photographier un bâtiment ou un site sous tous les angles, avec des centaines de photos qui se recouvrent, puis à les assembler par calcul. Le logiciel retrouve les mêmes points d&#x27;une photo à l&#x27;autre et reconstruit leur position dans l&#x27;espace.</p><p>On obtient un nuage de points, un modèle 3D texturé et une orthophoto à l&#x27;échelle, sur lesquels on peut mesurer des distances, des surfaces et des volumes.</p></details>
+        <details class="pf"><summary><h3>Quelle précision peut-on attendre ?</h3></summary><p>Les drones utilisés sont équipés du positionnement RTK, relié au réseau Centipède : chaque photo est géoréférencée pendant le vol. La résolution au sol est en général de l&#x27;ordre de 1 à 3 cm par pixel, selon la hauteur de vol et la caméra.</p><p>La précision finale dépend du site, de la végétation, des surfaces (vitres, toitures métalliques) et de la présence ou non de points de contrôle au sol. Elle est discutée avant la mission et indiquée dans le devis. Quand un levé de géomètre-expert est réglementairement obligatoire, la photogrammétrie le complète sans le remplacer.</p></details>
+        <details class="pf"><summary><h3>Photogrammétrie ou LiDAR : quelle différence ?</h3></summary><p>La photogrammétrie reconstruit le relief à partir de photos : elle donne un rendu réaliste et texturé, idéal pour les bâtiments, les façades, les toitures et les sites dégagés.</p><p>Le LiDAR mesure le terrain avec un laser et peut passer en partie à travers la végétation, ce qui le rend plus adapté aux terrains très boisés. OrizonDrone réalise des relevés par photogrammétrie. Si votre projet relève plutôt du LiDAR, je vous le dirai franchement avant de faire un devis.</p></details>
+        <details class="pf"><summary><h3>Quels fichiers vais-je recevoir ?</h3></summary><p>Selon votre projet : modèle 3D texturé (OBJ, FBX, RCS), nuage de points (LAS, LAZ), orthophoto (GeoTIFF), modèle numérique de terrain ou de surface, courbes de niveau, plan 2D (DXF, SHP) et rapport PDF avec mesures.</p><p>Avant la mission, je vous demande quels logiciels vous utilisez (AutoCAD, Revit, ArchiCAD, SketchUp, QGIS…) pour livrer directement dans le bon format.</p></details>
+        <details class="pf"><summary><h3>Je n&#x27;ai pas de logiciel 3D : comment consulter le modèle ?</h3></summary><p>Deux solutions, sans compétence technique. Le modèle peut être mis en ligne et consulté depuis un simple lien, dans le navigateur d&#x27;un ordinateur, d&#x27;une tablette ou d&#x27;un téléphone.</p><p>Vous pouvez aussi utiliser Orizon3D, une visionneuse gratuite pour Windows, Mac et Linux, qui ouvre les modèles 3D, les nuages de points et les orthophotos en quelques clics.</p></details>
+        <details class="pf"><summary><h3>Combien de temps entre le vol et la livraison ?</h3></summary><p>Le vol lui-même dure de quelques dizaines de minutes à une demi-journée selon la taille du site. Le traitement des photos et la préparation des fichiers prennent ensuite quelques jours. Le délai exact dépend du volume de données et des livrables demandés : il est indiqué dans le devis.</p></details>
+        <details class="pf"><summary><h3>Peut-on relever l&#x27;intérieur d&#x27;un bâtiment ?</h3></summary><p>La prestation porte sur l&#x27;extérieur : toitures, façades, abords et terrain. Pour un besoin en intérieur, contactez-moi : je vous dirai si c&#x27;est faisable et avec quelle méthode, au cas par cas.</p></details>
+        <details class="pf"><summary><h3>La météo peut-elle empêcher la mission ?</h3></summary><p>Oui. Pour des photos exploitables, il faut éviter la pluie, le brouillard et le vent fort. Un ciel couvert et homogène est souvent idéal, car il limite les ombres marquées. Je surveille la météo les jours précédents et je vous préviens si un report est nécessaire.</p></details>
+        <details class="pf"><summary><h3>Intervenez-vous sur des monuments et des édifices anciens ?</h3></summary><p>Oui. Le relevé par drone se fait sans aucun contact avec l&#x27;édifice, sans échafaudage et sans ancrage dans la maçonnerie. C&#x27;est une bonne base pour préparer une étude ou un chantier de restauration. Les autorisations de vol nécessaires sont obtenues avant l&#x27;intervention, et l&#x27;accord du propriétaire ou du gestionnaire du site est demandé au préalable.</p></details>
+      </div>
+      <p class="more">Toutes les questions : <a href="/faq/">FAQ OrizonDrone</a></p>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
   <section>
     <div class="container">
       <p class="section-label">Nos autres prestations</p>
@@ -284,7 +501,7 @@
     <div class="container">
       <div class="contact-block">
         <h2>Un projet de relevé photogrammétrique ?</h2>
-        <p>Orthophoto, modèle 3D, nuage de points — décrivez votre besoin, je vous réponds sous 24h avec une estimation.</p>
+        <p>Décrivez votre site et ce dont vous avez besoin : je vous réponds sous 48 h avec un devis gratuit.</p>
         <div class="hero-cta">
           <a href="tel:0759654934" class="btn-primary">07 59 65 49 34</a>
           <a href="https://www.orizondrone.fr/#contact" class="btn-secondary">Formulaire de contact</a>
