@@ -28,6 +28,12 @@
    "blogPost": [
     {
      "@id": "https://www.orizondrone.fr/journal/orthophoto-facade-drone/#article"
+    },
+    {
+     "@id": "https://www.orizondrone.fr/journal/modelisation-3d-drone-matrice-4e/#article"
+    },
+    {
+     "@id": "https://www.orizondrone.fr/journal/releve-3d-abbaye-de-bonnefont/#article"
     }
    ]
   },
@@ -200,10 +206,10 @@
     .meta{color:var(--text-muted);font-size:.85rem;margin-top:-1rem;margin-bottom:2rem}
     .resume{background:var(--bg-card);border:1px solid var(--border);border-left:3px solid var(--teal);border-radius:8px;padding:1.2rem 1.4rem;margin:0 0 2rem}
     .resume p{margin:0;font-size:.95rem}
-    .jl{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:1.5rem}
+    .jl{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1.5rem;align-items:start}
     .jc{background:var(--bg-card);border:1px solid var(--border);border-radius:12px;overflow:hidden;text-decoration:none;display:block;transition:border-color .2s}
     .jc:hover{border-color:var(--teal-light)}
-    .jc img{display:block;width:100%;aspect-ratio:16/9;object-fit:cover}
+    .jci{display:block;position:relative;width:100%;padding-top:50%;overflow:hidden;background:#0a0a0a}.jci img{position:absolute!important;inset:0;width:100%!important;height:100%!important;max-width:none!important;object-fit:cover}
     .jc div{padding:1.3rem 1.4rem}
     .jc small{color:var(--teal-light);font:700 .65rem 'Orbitron',sans-serif;letter-spacing:.15em;text-transform:uppercase}
     .jc h2{color:var(--white);font-size:1.05rem;margin:.6rem 0;line-height:1.4}
@@ -249,7 +255,9 @@
   <section style="padding-top:0">
     <div class="container">
       <div class="jl">
-        <a class="jc" href="/journal/orthophoto-facade-drone/"><img src="/bonnefont_ortho_est_porte.webp" alt="Extrait d'orthophoto de façade à 2 mm par pixel" width="1000" height="700" loading="lazy"><div><small>Photogrammétrie · 14 nov. 2026</small><h2>Orthophoto de façade par drone : comment on obtient 2 mm par pixel</h2><p>Ce qu'est une orthophoto, les quatre étapes pour la produire, et ce qu'il faut savoir avant d'en commander une.</p></div></a>
+        <a class="jc" href="/journal/orthophoto-facade-drone/"><span class="jci"><img src="/bonnefont_ortho_est_vue.webp" alt="Orthophoto de façade de l'abbaye de Bonnefont à 2 mm par pixel" width="2000" height="678" loading="lazy"></span><div><small>Photogrammétrie · 14 nov. 2026</small><h2>Orthophoto de façade par drone : comment on obtient 2 mm par pixel</h2><p>Ce qu'est une orthophoto, les quatre étapes pour la produire, et ce qu'il faut savoir avant d'en commander une.</p></div></a>
+        <a class="jc" href="/journal/modelisation-3d-drone-matrice-4e/"><span class="jci"><img src="/real_bonnefont.webp" alt="Modèle 3D texturé d'un bâtiment ancien" width="1280" height="720" loading="lazy"></span><div><small>Modélisation 3D · 11 nov. 2026</small><h2>Modélisation 3D par drone : ce que change le Matrice 4E pour vous</h2><p>Des modèles plus complets, des photos nettes et géoréférencées, les détails en hauteur, et les limites à connaître.</p></div></a>
+        <a class="jc" href="/journal/releve-3d-abbaye-de-bonnefont/"><span class="jci"><img src="/bonnefont_oblique.webp" alt="Vue aérienne de l'abbaye de Bonnefont" width="1600" height="1199" loading="lazy"></span><div><small>Patrimoine · 8 nov. 2026</small><h2>Relever une abbaye par drone : retour sur Bonnefont</h2><p>Pourquoi le drone sur un monument, la journée sur place et ce qui a été produit.</p></div></a>
       </div>
     </div>
   </section>
