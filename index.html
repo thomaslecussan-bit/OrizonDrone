@@ -235,7 +235,7 @@
   --border-a:rgba(15,118,110,0.25);
 }
 html { scroll-behavior:smooth; }
-body { background:var(--black); color:var(--white); font-family:'DM Sans',sans-serif; font-size:16px; line-height:1.65; overflow-x:hidden; }
+body { background:var(--black); color:var(--white); font-family:'DM Sans',sans-serif; font-size:16px; line-height:1.65; overflow-x:hidden; overflow-x:clip; }
 a { color:inherit; text-decoration:none; }
 
 /* ── UTILS ── */
@@ -566,7 +566,7 @@ footer p { font-size:.75rem; color:var(--muted); }
 /* ── RESPONSIVE MOBILE ── */
 @media(max-width:768px){
   /* Hero — titre plus petit, pas de débordement */
-  .hero { padding:5.5rem 1.2rem 3rem; overflow-x:hidden; }
+  .hero { padding:5.5rem 1.2rem 3rem; overflow-x:clip; }
   .hero h1 { font-size:clamp(1.8rem,8vw,2.8rem) !important; word-break:break-word; }
   .hero-tag { font-size:.62rem; }
   .hero-desc { font-size:.88rem; max-width:100%; }
@@ -633,7 +633,6 @@ footer p { font-size:.75rem; color:var(--muted); }
   .nacelles { grid-template-columns:1fr !important; }
 
   /* Overflow global */
-  body { overflow-x:hidden; }
   * { max-width:100%; }
 }
 
@@ -1352,12 +1351,13 @@ if(form){
 }
 #fixed-contact-btn:hover { transform:scale(1.05); background:var(--accent-hover); }
 #fixed-contact-btn svg { width:18px; height:18px; flex-shrink:0; fill:var(--black); }
-@media (max-width:520px) {
-  #fixed-contact-btn { padding:.8rem 1.1rem; font-size:.78rem; }
+@media (max-width:768px) {
+  #fixed-contact-btn { width:56px; height:56px; padding:0; justify-content:center; border-radius:50%; font-size:0; gap:0; right:1rem; bottom:1rem; }
+  #fixed-contact-btn svg { width:22px; height:22px; }
 }
 </style>
 
-<a href="#contact" id="fixed-contact-btn" aria-label="Aller au formulaire de contact">
+<a href="tel:0759654934" id="fixed-contact-btn" aria-label="Appeler OrizonDrone au 07 59 65 49 34">
   <svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.2 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .8-.2 1L6.6 10.8z"/></svg>
   07 59 65 49 34
 </a>
@@ -1371,5 +1371,6 @@ window.addEventListener('scroll',function(){var nav=document.querySelector('nav'
 <script src="three-bloom.min.js" defer></script>
 <script src="scene3d.js" defer></script>
 <script src="accueil.js" defer></script>
+<script src="/menu.js" defer></script>
 </body>
 </html>
