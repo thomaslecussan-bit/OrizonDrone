@@ -4,9 +4,11 @@
 
 ## Prestations
 
-- Photogrammétrie et relevé 3D de bâtiments et de sites : modèle 3D texturé (OBJ, RCS, FBX), nuage de points (LAS, LAZ), orthophoto (GeoTIFF), MNT/MNS, courbes de niveau, plan 2D (DXF, SHP), mesures et rapport PDF.
+- Photogrammétrie et relevé 3D de bâtiments et de sites : modèle 3D texturé (OBJ, RCS, FBX), nuage de points (LAS, LAZ), orthophoto (GeoTIFF), MNT/MNS, courbes de niveau (DXF, SHP), mesures et rapport PDF.
 - Consultation des livrables sans logiciel professionnel : lien 3D dans le navigateur, ou visionneuse gratuite Orizon3D (Windows, Mac, Linux).
-- Autres prestations : inspection technique par drone, nettoyage de toitures et façades par drone, captation aérienne.
+- Inspection de toitures, façades et bâtiments par drone : livraison des photos brutes haute résolution, du nuage de points, du modèle 3D et des orthophotos.
+- Nettoyage et démoussage de toitures et façades, par drone et à la perche, depuis le sol ; applicateur certifié Certibiocide.
+- Captation aérienne photo et vidéo.
 
 ## Matériel et méthode
 
@@ -24,15 +26,20 @@ Haute-Garonne (31), Ariège (09), Hautes-Pyrénées (65), Gers (32), Toulouse et
 - Téléphone : 07 59 65 49 34
 - Email : orizondrone@gmail.com
 - Adresse : Boussens (31360), Haute-Garonne, France
-- LinkedIn : https://www.linkedin.com/in/thomas-l%C3%A9cussan-604b04361/
+- LinkedIn (entreprise) : https://www.linkedin.com/company/146677976/
+- LinkedIn (Thomas Lécussan) : https://www.linkedin.com/in/thomas-l%C3%A9cussan-604b04361/
+- Fiche Google et avis clients : https://maps.app.goo.gl/aN3R9VPxpdG8Y1Qp6
 
 ## Pages principales
 
 - [Accueil](https://www.orizondrone.fr/) : photogrammétrie et modèles 3D par drone
 - [Photogrammétrie par drone](https://www.orizondrone.fr/photogrammetrie-drone/)
-- [Inspection technique par drone](https://www.orizondrone.fr/inspection-drone/)
-- [Nettoyage par drone](https://www.orizondrone.fr/nettoyage-drone/)
+- [Inspection technique par drone](https://www.orizondrone.fr/inspection-drone/) : photos, nuage de points, modèle 3D et orthophotos
+- [Nettoyage par drone et à la perche](https://www.orizondrone.fr/nettoyage-drone/) : démoussage de toitures et façades depuis le sol
 - [Captation aérienne](https://www.orizondrone.fr/captation-aerienne/)
 - [Réalisations](https://www.orizondrone.fr/realisations/) : exemples de relevés 3D par drone
+- [Journal de chantier](https://www.orizondrone.fr/journal/) : articles et retours de chantier
+- [Orthophoto de façade par drone](https://www.orizondrone.fr/journal/orthophoto-facade-drone/) : comment on obtient une orthophoto de façade à 2 mm par pixel, à quoi elle sert, ses limites
+- [Abbaye de Bonnefont](https://www.orizondrone.fr/realisations/abbaye-de-bonnefont/) : relevé 3D par drone d'une abbaye cistercienne à Proupiary (31), modèle 3D texturé et orthophotos des façades à 2 mm par pixel
 - [Questions fréquentes](https://www.orizondrone.fr/faq/)
 - [À propos de Thomas Lécussan](https://www.orizondrone.fr/a-propos/)
