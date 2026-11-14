@@ -104,7 +104,7 @@
      "name": "Quels fichiers vais-je recevoir ?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "Selon votre projet : modèle 3D texturé (OBJ, FBX, RCS), nuage de points (LAS, LAZ), orthophoto (GeoTIFF), modèle numérique de terrain ou de surface, courbes de niveau, plan 2D (DXF, SHP) et rapport PDF avec mesures. Avant la mission, je vous demande quels logiciels vous utilisez (AutoCAD, Revit, ArchiCAD, SketchUp, QGIS…) pour livrer directement dans le bon format."
+      "text": "Selon votre projet : modèle 3D texturé (OBJ, FBX, RCS), nuage de points (LAS, LAZ), orthophoto (GeoTIFF), modèle numérique de terrain ou de surface, courbes de niveau (DXF, SHP) et rapport PDF avec mesures. Avant la mission, je vous demande quels logiciels vous utilisez (AutoCAD, Revit, ArchiCAD, SketchUp, QGIS…) pour livrer directement dans le bon format."
      }
     },
     {
@@ -252,6 +252,7 @@
     .pf summary:focus-visible{outline:2px solid var(--teal-light);outline-offset:2px}
     @media (max-width:900px){.pst{grid-template-columns:1fr 1fr}}
     @media (max-width:560px){.pst{grid-template-columns:1fr}}
+    .breadcrumb-nav{position:static;height:auto;padding:0;background:none;border:0;backdrop-filter:none;-webkit-backdrop-filter:none;justify-content:flex-start;z-index:auto}
 </style>
 <meta property="og:site_name" content="OrizonDrone">
 <meta property="og:image" content="https://www.orizondrone.fr/og-image.jpg">
@@ -271,6 +272,7 @@
       <li><a href="/inspection-drone/">Inspection</a></li>
       <li><a href="/nettoyage-drone/">Nettoyage</a></li>
       <li><a href="/captation-aerienne/">Captation</a></li>
+      <li><a href="/journal/">Journal</a></li>
       <li><a href="https://www.orizondrone.fr/#contact" style="color:var(--teal-light)">Devis gratuit</a></li>
     </ul>
   </nav>
@@ -317,7 +319,7 @@
         <div class="card"><p class="card-num">MODÈLE 3D</p><h3>Modèle 3D texturé</h3><p>Reconstruction réaliste du bâtiment ou du site, avec la texture des photos. Base de travail pour une réhabilitation, une étude patrimoniale ou une présentation de projet.</p><div class="tags"><span class="tag">OBJ</span><span class="tag">FBX</span><span class="tag">RCS</span></div></div>
         <div class="card"><p class="card-num">NUAGE DE POINTS</p><h3>Nuage de points coloré</h3><p>Des millions de points géoréférencés, à importer dans AutoCAD, Revit, ArchiCAD ou CloudCompare pour dessiner l'existant, faire des coupes et des élévations.</p><div class="tags"><span class="tag">LAS</span><span class="tag">LAZ</span><span class="tag">E57 sur demande</span></div></div>
         <div class="card"><p class="card-num">ORTHOPHOTO</p><h3>Orthophoto géoréférencée</h3><p>Vue aérienne redressée, sans déformation, en Lambert 93. On y mesure directement des distances et des surfaces. Utile pour un dossier d'urbanisme, un plan masse ou un suivi de chantier.</p><div class="tags"><span class="tag">GeoTIFF</span><span class="tag">Lambert 93</span></div></div>
-        <div class="card"><p class="card-num">TOPOGRAPHIE</p><h3>MNT, MNS et courbes de niveau</h3><p>Modèles numériques de terrain et de surface, courbes de niveau et plan 2D, pour étudier un terrain, une pente ou un volume de terrassement.</p><div class="tags"><span class="tag">GeoTIFF</span><span class="tag">DXF</span><span class="tag">SHP</span></div></div>
+        <div class="card"><p class="card-num">TOPOGRAPHIE</p><h3>MNT, MNS et courbes de niveau</h3><p>Modèles numériques de terrain et de surface et courbes de niveau, pour étudier un terrain, une pente ou un volume de terrassement.</p><div class="tags"><span class="tag">GeoTIFF</span><span class="tag">DXF</span><span class="tag">SHP</span></div></div>
         <div class="card"><p class="card-num">MESURES</p><h3>Surfaces, volumes et rapport</h3><p>Surfaces de toiture, linéaires de façade, volumes de stock ou de déblais, calculés sur le modèle et réunis dans un rapport PDF illustré.</p><div class="tags"><span class="tag">PDF</span><span class="tag">Métrés</span></div></div>
         <div class="card"><p class="card-num">JUMEAU NUMÉRIQUE</p><h3>Modèle en ligne à partager</h3><p>Le modèle 3D mis en ligne et consultable depuis un simple lien. Pratique pour le présenter à des élus, un client ou un maître d'ouvrage.</p><div class="tags"><span class="tag">Lien web</span><span class="tag">One3D</span></div></div>
       </div>
@@ -395,8 +397,8 @@
       <h2 class="section-title">Haute-Garonne, Ariège<br />et départements voisins</h2>
       <div class="deux-col">
         <div>
-          <p>Basé à Boussens, j'interviens en priorité dans le Comminges et les Pyrénées, et plus largement en Haute-Garonne, en Ariège, dans les Hautes-Pyrénées et dans le Gers. Déplacement sans frais dans un rayon de 30 km autour de Boussens (31). Au-delà, tarif déplacement sur devis.</p>
-          <p>Collectivités, architectes, BTP, industriels — devis gratuit sous 48 h.</p>
+          <p>Basé à Boussens, j'interviens en priorité dans le Comminges et les Pyrénées, et plus largement en Haute-Garonne, en Ariège, dans les Hautes-Pyrénées et dans le Gers. Au-delà, tarif déplacement sur devis.</p>
+          <p>Collectivités, architectes, BTP, industriels — devis gratuit.</p>
         </div>
         <ul class="liste-zones">
           <li>Haute-Garonne (31) — Saint-Gaudens, Cazères, Muret, Carbonne, Luchon</li>
@@ -419,35 +421,35 @@
       <div class="zones-villes">
         <a href="/saint-gaudens/photogrammetrie-drone/" class="ville-link">
           <span class="ville-nom">Saint-Gaudens</span>
-          <span class="ville-dept">Dept. 31</span>
+          <span class="ville-dept">Dép. 31</span>
         </a>
         <a href="/cazeres/photogrammetrie-drone/" class="ville-link">
           <span class="ville-nom">Cazères</span>
-          <span class="ville-dept">Dept. 31</span>
+          <span class="ville-dept">Dép. 31</span>
         </a>
         <a href="/carbonne/photogrammetrie-drone/" class="ville-link">
           <span class="ville-nom">Carbonne</span>
-          <span class="ville-dept">Dept. 31</span>
+          <span class="ville-dept">Dép. 31</span>
         </a>
         <a href="/muret/photogrammetrie-drone/" class="ville-link">
           <span class="ville-nom">Muret</span>
-          <span class="ville-dept">Dept. 31</span>
+          <span class="ville-dept">Dép. 31</span>
         </a>
         <a href="/montrejeau/photogrammetrie-drone/" class="ville-link">
           <span class="ville-nom">Montréjeau</span>
-          <span class="ville-dept">Dept. 31</span>
+          <span class="ville-dept">Dép. 31</span>
         </a>
         <a href="/luchon/photogrammetrie-drone/" class="ville-link">
           <span class="ville-nom">Luchon</span>
-          <span class="ville-dept">Dept. 31</span>
+          <span class="ville-dept">Dép. 31</span>
         </a>
         <a href="/foix/photogrammetrie-drone/" class="ville-link">
           <span class="ville-nom">Foix</span>
-          <span class="ville-dept">Dept. 09</span>
+          <span class="ville-dept">Dép. 09</span>
         </a>
         <a href="/saint-girons/photogrammetrie-drone/" class="ville-link">
           <span class="ville-nom">Saint-Girons</span>
-          <span class="ville-dept">Dept. 09</span>
+          <span class="ville-dept">Dép. 09</span>
         </a></div>
     </div>
   </section>
@@ -462,7 +464,7 @@
         <details class="pf"><summary><h3>Qu&#x27;est-ce que la photogrammétrie par drone ?</h3></summary><p>La photogrammétrie par drone consiste à photographier un bâtiment ou un site sous tous les angles, avec des centaines de photos qui se recouvrent, puis à les assembler par calcul. Le logiciel retrouve les mêmes points d&#x27;une photo à l&#x27;autre et reconstruit leur position dans l&#x27;espace.</p><p>On obtient un nuage de points, un modèle 3D texturé et une orthophoto à l&#x27;échelle, sur lesquels on peut mesurer des distances, des surfaces et des volumes.</p></details>
         <details class="pf"><summary><h3>Quelle précision peut-on attendre ?</h3></summary><p>Les drones utilisés sont équipés du positionnement RTK, relié au réseau Centipède : chaque photo est géoréférencée pendant le vol. La résolution au sol est en général de l&#x27;ordre de 1 à 3 cm par pixel, selon la hauteur de vol et la caméra.</p><p>La précision finale dépend du site, de la végétation, des surfaces (vitres, toitures métalliques) et de la présence ou non de points de contrôle au sol. Elle est discutée avant la mission et indiquée dans le devis. Quand un levé de géomètre-expert est réglementairement obligatoire, la photogrammétrie le complète sans le remplacer.</p></details>
         <details class="pf"><summary><h3>Photogrammétrie ou LiDAR : quelle différence ?</h3></summary><p>La photogrammétrie reconstruit le relief à partir de photos : elle donne un rendu réaliste et texturé, idéal pour les bâtiments, les façades, les toitures et les sites dégagés.</p><p>Le LiDAR mesure le terrain avec un laser et peut passer en partie à travers la végétation, ce qui le rend plus adapté aux terrains très boisés. OrizonDrone réalise des relevés par photogrammétrie. Si votre projet relève plutôt du LiDAR, je vous le dirai franchement avant de faire un devis.</p></details>
-        <details class="pf"><summary><h3>Quels fichiers vais-je recevoir ?</h3></summary><p>Selon votre projet : modèle 3D texturé (OBJ, FBX, RCS), nuage de points (LAS, LAZ), orthophoto (GeoTIFF), modèle numérique de terrain ou de surface, courbes de niveau, plan 2D (DXF, SHP) et rapport PDF avec mesures.</p><p>Avant la mission, je vous demande quels logiciels vous utilisez (AutoCAD, Revit, ArchiCAD, SketchUp, QGIS…) pour livrer directement dans le bon format.</p></details>
+        <details class="pf"><summary><h3>Quels fichiers vais-je recevoir ?</h3></summary><p>Selon votre projet : modèle 3D texturé (OBJ, FBX, RCS), nuage de points (LAS, LAZ), orthophoto (GeoTIFF), modèle numérique de terrain ou de surface, courbes de niveau (DXF, SHP) et rapport PDF avec mesures.</p><p>Avant la mission, je vous demande quels logiciels vous utilisez (AutoCAD, Revit, ArchiCAD, SketchUp, QGIS…) pour livrer directement dans le bon format.</p></details>
         <details class="pf"><summary><h3>Je n&#x27;ai pas de logiciel 3D : comment consulter le modèle ?</h3></summary><p>Deux solutions, sans compétence technique. Le modèle peut être mis en ligne et consulté depuis un simple lien, dans le navigateur d&#x27;un ordinateur, d&#x27;une tablette ou d&#x27;un téléphone.</p><p>Vous pouvez aussi utiliser Orizon3D, une visionneuse gratuite pour Windows, Mac et Linux, qui ouvre les modèles 3D, les nuages de points et les orthophotos en quelques clics.</p></details>
         <details class="pf"><summary><h3>Combien de temps entre le vol et la livraison ?</h3></summary><p>Le vol lui-même dure de quelques dizaines de minutes à une demi-journée selon la taille du site. Le traitement des photos et la préparation des fichiers prennent ensuite quelques jours. Le délai exact dépend du volume de données et des livrables demandés : il est indiqué dans le devis.</p></details>
         <details class="pf"><summary><h3>Peut-on relever l&#x27;intérieur d&#x27;un bâtiment ?</h3></summary><p>La prestation porte sur l&#x27;extérieur : toitures, façades, abords et terrain. Pour un besoin en intérieur, contactez-moi : je vous dirai si c&#x27;est faisable et avec quelle méthode, au cas par cas.</p></details>
@@ -501,7 +503,7 @@
     <div class="container">
       <div class="contact-block">
         <h2>Un projet de relevé photogrammétrique ?</h2>
-        <p>Décrivez votre site et ce dont vous avez besoin : je vous réponds sous 48 h avec un devis gratuit.</p>
+        <p>Décrivez votre site et ce dont vous avez besoin : je vous réponds avec un devis gratuit.</p>
         <div class="hero-cta">
           <a href="tel:0759654934" class="btn-primary">07 59 65 49 34</a>
           <a href="https://www.orizondrone.fr/#contact" class="btn-secondary">Formulaire de contact</a>
@@ -519,6 +521,7 @@
 
   <footer>
     <p>© 2026 OrizonDrone · Thomas · Boussens, Haute-Garonne (31) · <a href="https://www.orizondrone.fr/">Retour au site principal</a></p>
+    <p><a href="https://maps.app.goo.gl/aN3R9VPxpdG8Y1Qp6" rel="noopener">Voir les avis clients sur Google</a></p>
   </footer>
 
 </body>

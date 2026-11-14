@@ -158,7 +158,8 @@
     footer { border-top: 1px solid var(--border); padding: 2rem; text-align: center; color: var(--text-muted); font-size: 0.8rem; }
     footer a { color: var(--teal-light); text-decoration: none; }
     @media (max-width: 768px) { .nav-links { display: none; } .histoire { grid-template-columns: 1fr; gap: 2rem; } .contact-block { padding: 2rem; } }
-  </style>
+      .breadcrumb-nav{position:static;height:auto;padding:0;background:none;border:0;backdrop-filter:none;-webkit-backdrop-filter:none;justify-content:flex-start;z-index:auto}
+</style>
 <meta property="og:title" content="Thomas Lécussan, télépilote de drone | OrizonDrone">
 <meta property="og:description" content="Thomas Lécussan, télépilote certifié CATS formé à la photogrammétrie, basé à Boussens (31). Matériel, parcours et méthode de travail d&#x27;OrizonDrone.">
 <meta property="og:site_name" content="OrizonDrone">
@@ -179,6 +180,7 @@
       <li><a href="/inspection-drone/">Inspection</a></li>
       <li><a href="/nettoyage-drone/">Nettoyage</a></li>
       <li><a href="/captation-aerienne/">Captation</a></li>
+      <li><a href="/journal/">Journal</a></li>
       <li><a href="https://www.orizondrone.fr/#contact" style="color:var(--teal-light)">Devis gratuit</a></li>
     </ul>
   </nav>
@@ -209,7 +211,7 @@
         <div class="histoire-texte">
           <p>Avant OrizonDrone, j'ai travaillé dans l'informatique. La technologie a toujours été au centre de ce que je fais — comprendre les outils, les maîtriser, les mettre au service de problèmes concrets.</p>
           <p>Le drone est entré dans ma vie comme une passion. Rapidement, j'ai compris que ce n'était pas un jouet — c'était un outil professionnel d'une précision remarquable, capable de transformer la façon dont on inspecte un bâtiment, relève un terrain ou documente un patrimoine.</p>
-          <p>J'ai décidé d'en faire mon métier. <strong>Certification CATS, formation photogrammétrie, formation pulvérisation par drone</strong> — j'ai construit une expertise technique solide pour intervenir en toute légalité et avec un niveau de précision professionnel.</p>
+          <p>J'ai décidé d'en faire mon métier. <strong>Certification CATS, formation photogrammétrie, formation pulvérisation par drone</strong> — je me suis formé pour intervenir en toute légalité et produire des relevés de qualité professionnelle.</p>
           <p>OrizonDrone est basé à <strong>Boussens, en plein Comminges</strong>. Ce n'est pas un hasard — c'est mon territoire. Je connais le bâti local, les contraintes du terrain pyrénéen, les interlocuteurs publics et privés. Je suis un prestataire de proximité, pas un opérateur national qui sous-traite à distance.</p>
         </div>
         <div class="certifs">
@@ -258,7 +260,7 @@
         <div class="materiel-card">
           <h3>DJI Matrice 350 RTK</h3>
           <ul>
-            <li>Plateforme industrielle certifiée</li>
+            <li>Plateforme industrielle</li>
             <li>Résistance IP55 — pluie et poussière</li>
             <li>Autonomie 55 minutes</li>
             <li>Nacelles interchangeables selon mission</li>
@@ -286,20 +288,20 @@
           </ul>
         </div>
         <div class="materiel-card">
-          <h3>Système de nettoyage</h3>
+          <h3>Nettoyage et démoussage</h3>
           <ul>
-            <li>Rampe 3 buses sous le drone</li>
-            <li>Alimentation depuis le sol par tuyau</li>
-            <li>Produits fongicides biodégradables</li>
-            <li>Portée jusqu'à 50 m de hauteur</li>
-            <li>Débit réglable selon le support</li>
+            <li>Pulvérisation par drone</li>
+            <li>Traitement à la perche pour les parties basses</li>
+            <li>Produits autorisés, appliqués à la juste dose</li>
+            <li>Applicateur certifié Certibiocide</li>
+            <li>Tout se fait depuis le sol</li>
           </ul>
         </div>
         <div class="materiel-card">
           <h3>Réseau RTK Centipède</h3>
           <ul>
             <li>Correction RTK en temps réel</li>
-            <li>Précision centimétrique sans GCP</li>
+            <li>Positionnement RTK des photos</li>
             <li>Couverture Comminges et départements voisins</li>
             <li>Données géoréférencées exploitables directement</li>
             <li>Gain de temps significatif sur le terrain</li>
@@ -333,11 +335,11 @@
         </div>
         <div class="valeur-card">
           <h4>Maîtrise technique de bout en bout</h4>
-          <p>Je pilote, je traite les données et je livre les fichiers finaux. Aucune sous-traitance du traitement photogrammétrique ou de la rédaction des rapports — vous avez un interlocuteur unique sur toute la chaîne.</p>
+          <p>Je pilote, je traite les données et je livre les fichiers finaux. Aucune sous-traitance du traitement photogrammétrique ou de la préparation des livrables — vous avez un interlocuteur unique sur toute la chaîne.</p>
         </div>
         <div class="valeur-card">
           <h4>Livrables exploitables directement</h4>
-          <p>Orthophotos géoréférencées, nuages de points, modèles 3D, rapports annotés — tout est livré prêt à l'emploi dans vos logiciels métiers. Pas de fichiers bruts à retraiter.</p>
+          <p>Orthophotos géoréférencées, nuages de points, modèles 3D — tout est livré prêt à l'emploi dans vos logiciels métiers. Pas de fichiers bruts à retraiter.</p>
         </div>
         <div class="valeur-card">
           <h4>Un cadre légal respecté</h4>
@@ -345,7 +347,7 @@
         </div>
         <div class="valeur-card">
           <h4>Réactivité</h4>
-          <p>Devis sous 48 h, et intervention rapide pour les urgences autour de Boussens. Pas de délai de plusieurs semaines pour planifier une mission simple.</p>
+          <p>Intervention rapide autour de Boussens. Pas de délai de plusieurs semaines pour planifier une mission simple.</p>
         </div>
         <div class="valeur-card">
           <h4>Passion de la précision</h4>
@@ -380,6 +382,7 @@
 
   <footer>
     <p>© 2026 OrizonDrone · Thomas · Boussens, Haute-Garonne (31) · <a href="https://www.orizondrone.fr/">Retour au site principal</a></p>
+    <p><a href="https://maps.app.goo.gl/aN3R9VPxpdG8Y1Qp6" rel="noopener">Voir les avis clients sur Google</a></p>
   </footer>
 
 </body>

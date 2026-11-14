@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Orthophoto de façade par drone : 2 mm par pixel | OrizonDrone</title>
+  <meta name="description" content="Qu'est-ce qu'une orthophoto de façade, comment on la produit par drone et photogrammétrie, et à quoi elle sert : l'exemple de l'abbaye de Bonnefont, en Comminges." />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+  <link rel="canonical" href="https://www.orizondrone.fr/journal/orthophoto-facade-drone/" />
+  <meta property="og:title" content="Orthophoto de façade par drone : 2 mm par pixel | OrizonDrone" />
+  <meta property="og:description" content="Qu'est-ce qu'une orthophoto de façade, comment on la produit par drone et photogrammétrie, et à quoi elle sert : l'exemple de l'abbaye de Bonnefont, en Comminges." />
+  <meta property="og:url" content="https://www.orizondrone.fr/journal/orthophoto-facade-drone/" />
+  <meta property="og:type" content="article" />
+  <script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "BlogPosting",
+   "@id": "https://www.orizondrone.fr/journal/orthophoto-facade-drone/#article",
+   "headline": "Orthophoto de façade par drone : comment on obtient 2 mm par pixel",
+   "description": "Qu'est-ce qu'une orthophoto de façade, comment on la produit par drone et photogrammétrie, et à quoi elle sert : l'exemple de l'abbaye de Bonnefont, en Comminges.",
+   "url": "https://www.orizondrone.fr/journal/orthophoto-facade-drone/",
+   "mainEntityOfPage": "https://www.orizondrone.fr/journal/orthophoto-facade-drone/",
+   "inLanguage": "fr-FR",
+   "datePublished": "2026-11-14",
+   "dateModified": "2026-11-14",
+   "author": {
+    "@type": "Person",
+    "@id": "https://www.orizondrone.fr/#thomas",
+    "name": "Thomas Lécussan",
+    "url": "https://www.orizondrone.fr/a-propos/"
+   },
+   "publisher": {
+    "@id": "https://www.orizondrone.fr/#entreprise"
+   },
+   "image": [
+    "https://www.orizondrone.fr/bonnefont_ortho_est_vue.webp",
+    "https://www.orizondrone.fr/bonnefont_oblique.webp"
+   ],
+   "about": [
+    "Orthophoto",
+    "Photogrammétrie par drone",
+    "Relevé de façade"
+   ],
+   "isPartOf": {
+    "@id": "https://www.orizondrone.fr/journal/#blog"
+   }
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "OrizonDrone",
+     "item": "https://www.orizondrone.fr/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Journal de chantier",
+     "item": "https://www.orizondrone.fr/journal/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "Orthophoto de façade par drone",
+     "item": "https://www.orizondrone.fr/journal/orthophoto-facade-drone/"
+    }
+   ]
+  }
+ ]
+}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --teal: #0F766E; --teal-light: #14B8A6; --teal-dim: #0d6b63;
+      --bg: #0a0a0a; --bg-card: #111111; --bg-card2: #161616;
+      --border: rgba(15,118,110,0.25); --text: #e5e5e5; --text-muted: #888; --white: #ffffff;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; font-size: 16px; }
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(10,10,10,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); padding: 0 2rem; height: 64px; display: flex; align-items: center; justify-content: space-between; }
+    .nav-logo { font-family: 'Orbitron', sans-serif; font-weight: 900; font-size: 1.1rem; color: var(--white); text-decoration: none; letter-spacing: 0.05em; }
+    .nav-logo span { color: var(--teal-light); }
+    .nav-links { display: flex; gap: 1.2rem; list-style: none; }
+    .nav-links a { color: var(--text-muted); text-decoration: none; font-size: 0.85rem; font-weight: 500; transition: color 0.2s; white-space: nowrap; }
+    .nav-links a:hover { color: var(--teal-light); }
+    .breadcrumb { padding: 6rem 2rem 0; max-width: 1100px; margin: 0 auto; }
+    .breadcrumb-nav { display: flex; align-items: center; gap: 0.5rem; font-size: 0.8rem; color: var(--text-muted); }
+    .breadcrumb-nav a { color: var(--text-muted); text-decoration: none; }
+    .breadcrumb-nav a:hover { color: var(--teal-light); }
+    .breadcrumb-nav span { color: var(--teal-light); }
+    .hero { min-height: 90vh; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 8rem 2rem 4rem; position: relative; overflow: hidden; }
+    .hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 80% 60% at 50% 40%, rgba(15,118,110,0.12) 0%, transparent 70%); pointer-events: none; }
+    .hero-eyebrow { font-family: 'Orbitron', sans-serif; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.2em; color: var(--teal-light); text-transform: uppercase; margin-bottom: 1.5rem; }
+    .hero h1 { font-family: 'Orbitron', sans-serif; font-weight: 900; font-size: clamp(1.8rem, 4vw, 3rem); line-height: 1.15; color: var(--white); margin-bottom: 1.5rem; max-width: 800px; }
+    .hero h1 span { color: var(--teal-light); }
+    .hero-sub { font-size: 1.05rem; color: var(--text-muted); max-width: 620px; margin-bottom: 2.5rem; line-height: 1.75; }
+    .hero-badges { display: flex; flex-wrap: wrap; gap: 0.75rem; justify-content: center; margin-bottom: 2.5rem; }
+    .badge { background: rgba(15,118,110,0.12); border: 1px solid var(--border); color: var(--teal-light); padding: 0.4rem 1rem; border-radius: 100px; font-size: 0.8rem; font-weight: 500; }
+    .hero-cta { display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; }
+    .btn-primary { background: var(--teal); color: var(--white); padding: 0.85rem 2rem; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 0.95rem; transition: background 0.2s; }
+    .btn-primary:hover { background: var(--teal-dim); }
+    .btn-secondary { border: 1px solid var(--border); color: var(--text); padding: 0.85rem 2rem; border-radius: 6px; text-decoration: none; font-weight: 500; font-size: 0.95rem; transition: border-color 0.2s, color 0.2s; }
+    .btn-secondary:hover { border-color: var(--teal-light); color: var(--teal-light); }
+    section { padding: 5rem 2rem; }
+    .container { max-width: 1100px; margin: 0 auto; }
+    .section-label { font-family: 'Orbitron', sans-serif; font-size: 0.65rem; font-weight: 700; letter-spacing: 0.2em; color: var(--teal-light); text-transform: uppercase; margin-bottom: 1rem; }
+    .section-title { font-family: 'Orbitron', sans-serif; font-weight: 900; font-size: clamp(1.4rem, 3vw, 2rem); color: var(--white); line-height: 1.2; margin-bottom: 1rem; }
+    .section-intro { color: var(--text-muted); max-width: 700px; line-height: 1.8; margin-bottom: 3rem; }
+    .cards-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; }
+    .card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 10px; padding: 2rem; transition: border-color 0.2s; }
+    .card:hover { border-color: var(--teal-light); }
+    .card-num { font-family: 'Orbitron', sans-serif; font-size: 0.7rem; color: var(--teal-light); font-weight: 700; letter-spacing: 0.15em; margin-bottom: 1rem; }
+    .card h3 { font-size: 1rem; font-weight: 600; color: var(--white); margin-bottom: 0.75rem; }
+    .card p { color: var(--text-muted); font-size: 0.88rem; line-height: 1.65; }
+    .tags { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1rem; }
+    .tag { background: rgba(15,118,110,0.1); color: var(--teal-light); padding: 0.25rem 0.6rem; border-radius: 4px; font-size: 0.75rem; font-weight: 500; }
+    .deux-col { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start; }
+    .deux-col p { color: var(--text-muted); line-height: 1.8; margin-bottom: 1rem; }
+    .liste-zones { list-style: none; display: flex; flex-direction: column; gap: 0.5rem; }
+    .liste-zones li { color: var(--text); font-size: 0.9rem; padding-left: 1.25rem; position: relative; }
+    .liste-zones li::before { content: '▸'; position: absolute; left: 0; color: var(--teal-light); font-size: 0.75rem; top: 0.15em; }
+    .block-info { background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 2.5rem; }
+    .livrables-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-top: 2rem; }
+    .livrable-item { background: var(--bg-card2); border: 1px solid var(--border); border-radius: 8px; padding: 1.25rem; }
+    .livrable-item h4 { font-size: 0.9rem; font-weight: 600; color: var(--white); margin-bottom: 0.5rem; }
+    .livrable-item p { color: var(--text-muted); font-size: 0.82rem; line-height: 1.55; }
+    .zones-villes { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 0.75rem; margin-top: 2rem; }
+    .ville-link { background: var(--bg-card2); border: 1px solid var(--border); border-radius: 8px; padding: 1rem 1.25rem; text-decoration: none; transition: border-color 0.2s, background 0.2s; }
+    .ville-link:hover { border-color: var(--teal-light); background: rgba(15,118,110,0.06); }
+    .ville-link .ville-nom { font-size: 0.9rem; font-weight: 600; color: var(--white); display: block; margin-bottom: 0.2rem; }
+    .ville-link .ville-dept { font-size: 0.75rem; color: var(--text-muted); }
+    .contact-block { background: linear-gradient(135deg, rgba(15,118,110,0.08) 0%, transparent 60%); border: 1px solid var(--border); border-radius: 12px; padding: 3.5rem; text-align: center; }
+    .contact-block h2 { font-family: 'Orbitron', sans-serif; font-weight: 900; font-size: clamp(1.3rem, 3vw, 1.8rem); color: var(--white); margin-bottom: 1rem; }
+    .contact-block p { color: var(--text-muted); margin-bottom: 2rem; max-width: 480px; margin-left: auto; margin-right: auto; }
+    .contact-info { display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; margin-top: 2rem; padding-top: 2rem; border-top: 1px solid var(--border); }
+    .contact-info a { color: var(--text-muted); text-decoration: none; font-size: 0.9rem; transition: color 0.2s; }
+    .contact-info a:hover { color: var(--teal-light); }
+    .autres-prestations { display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 2rem; }
+    .prestation-link { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 1rem 1.5rem; text-decoration: none; transition: border-color 0.2s; }
+    .prestation-link:hover { border-color: var(--teal-light); }
+    .prestation-link span { font-size: 0.85rem; font-weight: 600; color: var(--white); display: block; margin-bottom: 0.2rem; }
+    .prestation-link small { font-size: 0.75rem; color: var(--text-muted); }
+    .divider { height: 1px; background: var(--border); margin: 0 2rem; }
+    footer { border-top: 1px solid var(--border); padding: 2rem; text-align: center; color: var(--text-muted); font-size: 0.8rem; }
+    footer a { color: var(--teal-light); text-decoration: none; }
+    @media (max-width: 768px) { .nav-links { display: none; } .deux-col { grid-template-columns: 1fr; } .contact-block { padding: 2rem; } }
+    .def p{color:var(--text);font-size:1.05rem;line-height:1.8;margin:0}
+    .hl{border-color:var(--teal-light)}
+    .h3w{font-size:1.1rem;font-weight:600;color:var(--white);margin:.2rem 0 .6rem}
+    .block-info p{color:var(--text-muted);line-height:1.75}
+    .pst{list-style:none;display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem}
+    .pst li{border-top:2px solid var(--teal);padding-top:1.2rem}
+    .pst span{font-family:'Orbitron',sans-serif;font-size:.75rem;color:var(--teal-light);letter-spacing:.15em}
+    .pst h3{color:var(--white);font-size:1.05rem;margin:.5rem 0}
+    .pst p{color:var(--text-muted);font-size:.9rem;line-height:1.65}
+    .more{margin-top:2rem;color:var(--text-muted)}.more a{color:var(--teal-light)}
+    .pfs{max-width:820px}
+    .pf{border:1px solid var(--border);border-radius:8px;margin-bottom:.75rem;background:var(--bg-card)}
+    .pf summary{cursor:pointer;list-style:none;padding:1.15rem 3rem 1.15rem 1.5rem;position:relative}
+    .pf summary::-webkit-details-marker{display:none}
+    .pf summary::after{content:'+';position:absolute;right:1.4rem;top:1rem;color:var(--teal-light);font-size:1.3rem;transition:transform .25s}
+    .pf[open] summary::after{transform:rotate(45deg)}
+    .pf summary h3{font-size:.98rem;font-weight:600;color:var(--white);line-height:1.4}
+    .pf p{padding:0 1.5rem 1rem;color:var(--text-muted);line-height:1.75;font-size:.93rem}
+    .pf summary:focus-visible{outline:2px solid var(--teal-light);outline-offset:2px}
+    @media (max-width:900px){.pst{grid-template-columns:1fr 1fr}}
+    @media (max-width:560px){.pst{grid-template-columns:1fr}}
+    .rh{min-height:60vh}
+    .rls{display:flex;flex-direction:column;gap:4rem}
+    .rl{display:grid;grid-template-columns:1.4fr 1fr;gap:2.5rem;align-items:center}
+    .rl:nth-child(even){grid-template-columns:1fr 1.4fr}.rl:nth-child(even) figure{order:2}
+    .rl figure{margin:0;border:1px solid var(--border);border-radius:10px;overflow:hidden;background:#000}
+    .rl img{display:block;width:100%;height:auto}
+    .rl-h{font-family:'Orbitron',sans-serif;font-weight:900;font-size:1.5rem;color:var(--white);margin-bottom:1rem}
+    .rl-t p{color:var(--text-muted);line-height:1.75;margin-bottom:.9rem}
+    @media (max-width:860px){.rl,.rl:nth-child(even){grid-template-columns:1fr}.rl:nth-child(even) figure{order:0}}
+    .bf-v{width:100%;max-width:1100px;margin:2.5rem auto 0;border:1px solid var(--border);border-radius:12px;overflow:hidden;background:#000}
+    .bf-v video{display:block;width:100%;height:auto}
+    .bf-g{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem}
+    .bf-g figure{margin:0;border:1px solid var(--border);border-radius:10px;overflow:hidden;background:#000}
+    .bf-g img{display:block;width:100%;height:auto}
+    .bf-g figcaption{padding:.8rem 1rem;color:var(--text-muted);font-size:.85rem}
+    .bf-t p{color:var(--text-muted);line-height:1.8;margin-bottom:1rem;max-width:760px}
+    .bf-ok{color:var(--text-muted);font-size:.85rem;margin-top:2rem}
+    @media (max-width:760px){.bf-g{grid-template-columns:1fr}}
+    .breadcrumb-nav{position:static;height:auto;padding:0;background:none;border:0;backdrop-filter:none;-webkit-backdrop-filter:none;justify-content:flex-start;z-index:auto}
+    .of-tabs{display:flex;gap:.5rem;flex-wrap:wrap;margin:0 0 1.2rem}
+    .of-tab{background:var(--bg-card);border:1px solid var(--border);color:var(--text-muted);padding:.55rem 1.1rem;border-radius:6px;font:500 .85rem 'Inter',sans-serif;cursor:pointer}
+    .of-tab[aria-selected="true"]{border-color:var(--teal-light);color:var(--white);background:rgba(15,118,110,.15)}
+    .of-pane[hidden]{display:none}
+    .of-img{position:relative;border:1px solid var(--border);border-radius:10px;overflow:hidden;background:#0a0a0a;cursor:crosshair}
+    .of-img>img{display:block;width:100%;height:auto;user-select:none;-webkit-user-drag:none}
+    .of-lens{position:absolute;width:240px;height:240px;border-radius:50%;border:2px solid var(--teal-light);box-shadow:0 10px 40px rgba(0,0,0,.6);pointer-events:none;background-repeat:no-repeat;background-color:#0a0a0a;opacity:0;transition:opacity .15s;transform:translate(-50%,-50%)}
+    .of-img.on .of-lens{opacity:1}
+    .of-hs{position:absolute;border:1.5px solid var(--teal-light);border-radius:3px;pointer-events:none}
+    .of-hs b{position:absolute;top:-1.6rem;left:-1px;background:var(--teal);color:#fff;font:700 .7rem 'Inter',sans-serif;padding:.15rem .45rem;border-radius:3px}
+    .of-meta{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;color:var(--text-muted);font-size:.82rem;margin:.7rem 0 1.8rem}
+    .of-meta strong{color:var(--teal-light);font-weight:600}
+    .of-crops{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem}
+    .of-crops figure{margin:0;border:1px solid var(--border);border-radius:10px;overflow:hidden;background:#000}
+    .of-crops img{display:block;width:100%;height:auto}
+    .of-crops figcaption{padding:.8rem 1rem;color:var(--text-muted);font-size:.85rem}
+    .of-crops figcaption b{color:var(--teal-light)}
+    @media (max-width:760px){.of-crops{grid-template-columns:1fr}.of-lens{width:160px;height:160px}}
+    .art{max-width:760px;margin:0 auto}
+    .art p{color:#c9c9c9;line-height:1.85;margin-bottom:1.15rem;font-size:1.02rem}
+    .art h2{font-family:'Orbitron',sans-serif;font-size:1.15rem;color:var(--white);margin:2.6rem 0 1rem;line-height:1.35;letter-spacing:.02em}
+    .art ul{margin:0 0 1.2rem 1.2rem;color:#c9c9c9;line-height:1.8}
+    .art strong{color:var(--white)}
+    .art figure{margin:2rem 0;border:1px solid var(--border);border-radius:10px;overflow:hidden;background:#000}
+    .art figure img{display:block;width:100%;height:auto}
+    .art figcaption{padding:.8rem 1rem;color:var(--text-muted);font-size:.85rem}
+    .art a{color:var(--teal-light)}
+    .meta{color:var(--text-muted);font-size:.85rem;margin-top:-1rem;margin-bottom:2rem}
+    .resume{background:var(--bg-card);border:1px solid var(--border);border-left:3px solid var(--teal);border-radius:8px;padding:1.2rem 1.4rem;margin:0 0 2rem}
+    .resume p{margin:0;font-size:.95rem}
+    .jl{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:1.5rem}
+    .jc{background:var(--bg-card);border:1px solid var(--border);border-radius:12px;overflow:hidden;text-decoration:none;display:block;transition:border-color .2s}
+    .jc:hover{border-color:var(--teal-light)}
+    .jc img{display:block;width:100%;aspect-ratio:16/9;object-fit:cover}
+    .jc div{padding:1.3rem 1.4rem}
+    .jc small{color:var(--teal-light);font:700 .65rem 'Orbitron',sans-serif;letter-spacing:.15em;text-transform:uppercase}
+    .jc h2{color:var(--white);font-size:1.05rem;margin:.6rem 0;line-height:1.4}
+    .jc p{color:var(--text-muted);font-size:.9rem;line-height:1.65}
+    .jsoon{border:1px dashed var(--border);border-radius:12px;padding:1.4rem;color:var(--text-muted);font-size:.9rem;line-height:1.7}
+</style>
+<meta property="og:site_name" content="OrizonDrone">
+<meta property="og:image" content="https://www.orizondrone.fr/bonnefont_ortho_est_vue.webp">
+<meta property="og:locale" content="fr_FR">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon-192.png" type="image/png" sizes="192x192">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="theme-color" content="#050606">
+</head>
+<body>
+
+  <nav>
+    <a href="https://www.orizondrone.fr/" class="nav-logo">ORIZON<span>DRONE</span></a>
+    <ul class="nav-links">
+      <li><a href="/photogrammetrie-drone/">Photogrammétrie</a></li>
+      <li><a href="/inspection-drone/">Inspection</a></li>
+      <li><a href="/nettoyage-drone/">Nettoyage</a></li>
+      <li><a href="/captation-aerienne/">Captation</a></li>
+      <li><a href="/journal/">Journal</a></li>
+      <li><a href="https://www.orizondrone.fr/#contact" style="color:var(--teal-light)">Devis gratuit</a></li>
+    </ul>
+  </nav>
+
+  <div class="breadcrumb">
+    <nav class="breadcrumb-nav" aria-label="Fil d'Ariane">
+      <a href="https://www.orizondrone.fr/">OrizonDrone</a>
+      <span>›</span>
+      <a href="/journal/">Journal</a>
+      <span>›</span>
+      <span>Orthophoto de façade</span>
+    </nav>
+  </div>
+
+  <section style="padding-top:2rem">
+    <article class="art">
+      <p class="section-label">Journal de chantier · Photogrammétrie</p>
+      <h1 class="section-title" style="font-size:clamp(1.5rem,3.4vw,2.2rem)">Orthophoto de façade par drone : comment on obtient 2 mm par pixel</h1>
+      <p class="meta">Par Thomas Lécussan, télépilote à Boussens · 14 novembre 2026 · 6 min de lecture</p>
+      <div class="resume"><p><strong>En bref.</strong> Une orthophoto de façade est une image redressée et à l'échelle, sans perspective : on peut y mesurer et dessiner directement. On l'obtient en photographiant la façade de très près par drone, sous de nombreux angles, puis en calculant un modèle 3D qu'on projette sur le plan du mur. À Bonnefont, chaque pixel représente 2 mm de façade.</p></div>
+
+      <figure><img src="/bonnefont_ortho_est_vue.webp" alt="Orthophoto de la façade est du bâtiment des convers de l'abbaye de Bonnefont, redressée à l'échelle" width="2000" height="678"><figcaption>Façade est du bâtiment des convers, abbaye de Bonnefont (Proupiary, 31). Orthophoto à 2 mm par pixel.</figcaption></figure>
+
+      <h2>Une photo de façade ne suffit pas</h2>
+      <p>Prenez une façade en photo, même avec un très bon appareil : les étages du haut paraissent plus petits que ceux du bas, les bords sont déformés, et rien n'est à la même échelle. On peut la regarder, mais on ne peut pas mesurer dessus.</p>
+      <p>Une orthophoto corrige tout ça. Chaque point du mur est vu comme s'il était pile en face de vous, à la même distance. Le résultat ressemble à une photo, mais il se comporte comme un plan : une fenêtre de 1,20 m mesure 1,20 m partout sur l'image.</p>
+
+      <h2>Étape 1 : préparer le vol</h2>
+      <p>Avant de décoller, il y a le repérage du site et les démarches : selon le lieu, un vol près d'un monument, en zone habitée ou près d'un aérodrome demande une déclaration ou une autorisation. Je regarde aussi la météo, et pas seulement le vent : une lumière régulière donne une texture plus propre qu'un soleil rasant qui découpe des ombres dures sur la pierre.</p>
+
+      <h2>Étape 2 : photographier de très près, sous tous les angles</h2>
+      <p>La finesse de l'orthophoto dépend surtout de la distance entre l'appareil et le mur. Plus on vole près, plus chaque pixel couvre une petite surface. Pour descendre à 2 mm, il faut longer la façade de près, en plusieurs passages, avec des photos qui se recouvrent largement.</p>
+      <p>On ajoute des vues obliques et des photos prises au-dessus du bâtiment. Le logiciel a besoin de voir chaque pierre depuis plusieurs positions pour la placer précisément dans l'espace. Une zone vue une seule fois, c'est une zone mal reconstruite.</p>
+
+      <figure><img src="/bonnefont_oblique.webp" alt="Vue aérienne oblique de l'abbaye de Bonnefont prise par drone" width="1600" height="1199" loading="lazy"><figcaption>Une vue oblique parmi des centaines : chaque partie du bâtiment doit être photographiée depuis plusieurs positions.</figcaption></figure>
+
+      <h2>Étape 3 : calculer le modèle 3D</h2>
+      <p>De retour au bureau, le logiciel de photogrammétrie retrouve les mêmes détails sur des centaines de photos et en déduit la position exacte de chaque prise de vue. Il en tire un nuage de points, puis un modèle 3D maillé, recouvert de la texture des photos.</p>
+      <p>C'est l'étape la plus longue en calcul, et celle où l'on vérifie tout : une photo floue, un reflet ou un arbre devant le mur se voient tout de suite sur le modèle.</p>
+
+      <h2>Étape 4 : redresser la façade</h2>
+      <p>On définit ensuite le plan de la façade, puis on projette le modèle texturé sur ce plan. Le résultat est l'orthophoto : une image à l'échelle, sans perspective, qu'on exporte à la résolution voulue. À Bonnefont, j'ai exporté les façades est et ouest à 2 mm par pixel, soit des images de plus de 18 000 pixels de large pour une façade d'environ 36 m.</p>
+
+      <figure><img src="/bonnefont_ortho_est_porte.webp" alt="Extrait à pleine résolution d'une orthophoto de façade : porte cloutée et appareil de pierre" width="1000" height="700" loading="lazy"><figcaption>Extrait à pleine résolution : environ 2 m sur 1,40 m de mur. On distingue les clous de la porte et chaque joint.</figcaption></figure>
+
+      <h2>À quoi ça sert, concrètement</h2>
+      <ul>
+        <li><strong>Dessiner</strong> les élévations d'un bâtiment sans monter sur un échafaudage.</li>
+        <li><strong>Mesurer</strong> ouvertures, hauteurs et surfaces directement sur l'image.</li>
+        <li><strong>Repérer les désordres</strong> : fissures, joints dégradés, pierres manquantes, mousses et lichens.</li>
+        <li><strong>Garder une trace datée</strong> de l'état d'un mur, et comparer d'une année sur l'autre.</li>
+        <li><strong>Préparer et chiffrer des travaux</strong> sur une base fiable.</li>
+      </ul>
+
+      <h2>Ce qu'il faut savoir avant de commander</h2>
+      <p><strong>2 mm par pixel, ce n'est pas une précision de 2 mm.</strong> C'est la finesse de l'image. La justesse des mesures dépend aussi du géoréférencement : positionnement RTK du drone, points de contrôle mesurés au sol. Si vous avez besoin de cotes précises, on en parle avant la mission pour prévoir ce qu'il faut.</p>
+      <p><strong>Ce que le drone ne voit pas n'apparaît pas.</strong> Un arbre collé au mur, le dessous d'un débord de toit ou l'intérieur d'un bâtiment ne se reconstruisent pas depuis l'extérieur. On repère ces zones ensemble avant de voler.</p>
+      <p><strong>Vous n'avez pas besoin de logiciel spécialisé.</strong> L'orthophoto s'ouvre comme une image. Le modèle 3D et le nuage de points se consultent dans un navigateur ou dans la visionneuse gratuite Orizon3D.</p>
+
+      <h2>Voir le résultat complet</h2>
+      <p>Les deux façades de Bonnefont sont consultables en pleine résolution, avec une loupe, sur la page de la réalisation : <a href="/realisations/abbaye-de-bonnefont/#orthophotos">relevé 3D de l'abbaye de Bonnefont</a>. Pour en savoir plus sur la méthode et les livrables, voir aussi la page <a href="/photogrammetrie-drone/">photogrammétrie par drone</a>.</p>
+    </article>
+  </section>
+
+  <div class="divider"></div>
+
+  <section>
+    <div class="container">
+      <div class="contact-block">
+        <h2>Une façade à relever ?</h2>
+        <p>Bâtiment ancien, église, immeuble ou ouvrage : décrivez votre projet, je vous réponds avec un devis gratuit et je vous dis franchement si le drone est la bonne méthode.</p>
+        <div class="hero-cta"><a href="tel:0759654934" class="btn-primary">07 59 65 49 34</a><a href="https://www.orizondrone.fr/#contact" class="btn-secondary">Demander un devis</a></div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 OrizonDrone · Thomas Lécussan · Boussens, Haute-Garonne (31) · <a href="https://www.orizondrone.fr/">Retour au site principal</a> · <a href="/journal/">Journal de chantier</a></p>
+    <p><a href="https://maps.app.goo.gl/aN3R9VPxpdG8Y1Qp6" rel="noopener">Voir les avis clients sur Google</a></p>
+  </footer>
+
+</body>
+</html>
