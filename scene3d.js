@@ -1,7 +1,7 @@
 /* OrizonDrone — scène « jumeau 3D » v2 : abbaye en nuage de points éclairé, drone, relevé, modèle */
 (function(){
 var REDUCE=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-var cv=document.getElementById('j-gl'),sec=document.getElementById('j-sc'),hud=document.getElementById('j-hud'),stepEls=[].slice.call(document.querySelectorAll('#j-steps li'));
+var cv=document.getElementById('j-gl'),sec=document.getElementById('j-sc'),hud=document.getElementById('j-hud'),stepEls=[].slice.call(document.querySelectorAll('#j-steps li')),pct=document.getElementById('j-pct');
 if(!window.THREE){document.getElementById('j-fb').style.display='block';return;}
 var renderer;try{renderer=new THREE.WebGLRenderer({canvas:cv,antialias:true,powerPreference:'high-performance'});}catch(e){document.getElementById('j-fb').style.display='block';return;}
 var MOB=window.innerWidth<760,BLOOM=!MOB&&!!THREE.UnrealBloomPass;
@@ -116,7 +116,7 @@ var LBL=[['Clocher',[-17.5,38.5,0]],['Nef',[1,16.5,0]],['Chevet',[19,12,0]],['Cl
 
 /* ================= INTERACTION ================= */
 var drag=0,dragV=0,down=false,lx=0;
-cv.addEventListener('pointerdown',function(e){down=true;lx=e.clientX;try{cv.setPointerCapture(e.pointerId);}catch(_){}document.getElementById('j-hint').style.opacity=0;});
+cv.addEventListener('pointerdown',function(e){down=true;lx=e.clientX;try{cv.setPointerCapture(e.pointerId);}catch(_){}});
 cv.addEventListener('pointermove',function(e){if(!down)return;var dx=e.clientX-lx;lx=e.clientX;dragV=dx*.006;drag+=dragV;});
 cv.addEventListener('pointerup',function(){down=false;});cv.addEventListener('pointercancel',function(){down=false;});
 
@@ -125,7 +125,8 @@ var t0=performance.now(),last=t0,photos=0,lastShot=-9,visible=true,TAKE=2.2,ORBI
 new IntersectionObserver(function(e){visible=e[0].isIntersecting;if(visible){last=performance.now();requestAnimationFrame(loop);}}).observe(sec);
 var V=new THREE.Vector3(),aim=new THREE.Vector3(),toA=new THREE.Vector3(),right=new THREE.Vector3(),up=new THREE.Vector3(),Y=new THREE.Vector3(0,1,0),pv=new THREE.Vector3();
 function loop(now){var dt=Math.min(.05,(now-last)/1000);last=now;var t=REDUCE?60:(now-t0)/1000;
-  var rb=sec.getBoundingClientRect(),span=sec.offsetHeight-window.innerHeight,p=REDUCE?.5:clamp(-rb.top/span);
+  var rb=sec.getBoundingClientRect(),span=Math.max(1,sec.offsetHeight-window.innerHeight),p=REDUCE?.5:(MOB?clamp((t-TAKE-ORBIT-3)/7)*.82:clamp(-rb.top/span));
+  sec.style.setProperty('--p',p.toFixed(4));if(pct)pct.textContent=Math.round(p*100);
   var take=sm(t/TAKE),flyU=clamp((t-TAKE)/ORBIT),az=AZ0+flyU*TAU*1.04,dh=lerp(.9,23,take)+Math.sin(t*1.3)*.35*take;
   U.uScan.value=flyU>=1?99:(t<TAKE?-1:flyU*TAU*1.04+.35);
   var colMix=sm((t-TAKE-ORBIT-.2)/2.4),s2=sm((p-.26)/.2),s3=sm((p-.6)/.2);

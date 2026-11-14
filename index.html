@@ -1056,6 +1056,24 @@ body{background:var(--z-bg)}
 
 }
 @media(prefers-reduced-motion:reduce){.hx-rise,.hx-eye i{animation:none!important;opacity:1;transform:none}}
+
+/* jauge de progression du relevé (ordinateur) */
+.j-rail{position:absolute;z-index:4;right:2.5rem;top:50%;height:44vh;transform:translateY(-42%);display:flex;gap:1.1rem;pointer-events:none}
+.j-rail .j-steps{position:relative;right:auto;bottom:auto;width:13rem;height:100%;display:block}
+.j-rail .j-steps li{position:absolute;right:0;transform:translateY(-.55rem);opacity:.35;transition:opacity .5s,transform .5s}
+.j-rail .j-steps li.on{opacity:1;transform:translateY(-.55rem) translateX(-4px)}
+.j-track{position:relative;width:2px;height:100%;background:rgba(127,245,223,.16)}
+.j-track::before{content:'';position:absolute;left:-5px;width:12px;top:0;bottom:0;background:repeating-linear-gradient(180deg,rgba(127,245,223,.35) 0 1px,transparent 1px 5%);-webkit-mask:linear-gradient(90deg,#000 0 4px,transparent 4px 8px,#000 8px);mask:linear-gradient(90deg,#000 0 4px,transparent 4px 8px,#000 8px)}
+.j-fill{position:absolute;left:0;top:0;width:2px;height:100%;background:linear-gradient(#7ff5df,#14b8a6);transform-origin:top;transform:scaleY(var(--p,0));box-shadow:0 0 12px rgba(20,184,166,.8)}
+.j-dot{position:absolute;left:1px;top:calc(var(--p,0)*100%);width:12px;height:12px;margin:-6px 0 0 -6px;border-radius:50%;background:#7ff5df;box-shadow:0 0 0 4px rgba(20,184,166,.25),0 0 18px #14b8a6}
+.j-pcth{position:absolute;right:-6px;top:-2.6rem;font:400 .68rem var(--z-mono);letter-spacing:.16em;text-transform:uppercase;color:rgba(204,251,241,.75);white-space:nowrap;background:rgba(4,6,6,.55);padding:.25rem .5rem}.j-pcth b{color:#fff;font-weight:400}
+.j-rail .j-steps li{background:rgba(4,6,6,.45);padding:.2rem .5rem}
+.j-hint{display:flex;align-items:center;gap:.8rem;opacity:calc(1 - var(--p,0)*12);font-size:.7rem}
+.j-mouse{position:relative;width:22px;height:34px;border:2px solid rgba(204,251,241,.8);border-radius:12px;flex:none}
+.j-mouse i{position:absolute;left:50%;top:6px;width:4px;height:7px;margin-left:-2px;border-radius:2px;background:#7ff5df;animation:jWheel 1.6s ease-in-out infinite}
+@keyframes jWheel{0%{transform:translateY(0);opacity:1}70%{transform:translateY(10px);opacity:0}100%{transform:translateY(0);opacity:0}}
+@media(max-width:760px){.j-sc{height:auto}.j-st{position:relative;height:100svh;min-height:560px}.j-rail,.j-hint{display:none}}
+@media(prefers-reduced-motion:reduce){.j-mouse i{animation:none}}
 </style>
 
 <!-- HAUT DE PAGE 3D : LE DRONE RELÈVE L'ÉDIFICE -->
@@ -1073,12 +1091,16 @@ body{background:var(--z-bg)}
         <a href="#realisations" class="z-btn s"><span class="z-l">Voir des réalisations</span><span class="z-s">Réalisations</span></a>
       </div>
     </div>
-    <ol class="j-steps" id="j-steps">
-      <li class="on"><small>01</small><b>Le vol</b></li>
-      <li><small>02</small><b>Le nuage de points</b></li>
-      <li><small>03</small><b>Le modèle 3D</b></li>
-    </ol>
-    <div class="j-hint" id="j-hint">Faites glisser pour tourner · défilez pour la suite</div>
+    <div class="j-rail" aria-hidden="true">
+      <ol class="j-steps" id="j-steps">
+        <li class="on" style="top:0%"><small>01</small><b>Le vol</b></li>
+        <li style="top:36%"><small>02</small><b>Le nuage de points</b></li>
+        <li style="top:72%"><small>03</small><b>Le modèle 3D</b></li>
+      </ol>
+      <div class="j-track"><i class="j-fill"></i><span class="j-dot"></span></div>
+      <div class="j-pcth">Relevé <b id="j-pct">0</b> %</div>
+    </div>
+    <div class="j-hint" id="j-hint" aria-hidden="true"><span class="j-mouse"><i></i></span><span>Faites défiler pour relever le bâtiment</span></div>
   </div>
 </section>
 
