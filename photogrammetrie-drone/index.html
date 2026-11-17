@@ -154,7 +154,7 @@
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil+Display:wght@700;800;900&family=Stick+No+Bills:wght@600;800&family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
@@ -163,9 +163,9 @@
       --border: rgba(15,118,110,0.25); --text: #e5e5e5; --text-muted: #888; --white: #ffffff;
     }
     html { scroll-behavior: smooth; }
-    body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; font-size: 16px; }
+    body { font-family: var(--od-text); background: var(--bg); color: var(--text); line-height: 1.6; font-size: 16px; }
     nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(10,10,10,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); padding: 0 2rem; height: 64px; display: flex; align-items: center; justify-content: space-between; }
-    .nav-logo { font-family: 'Orbitron', sans-serif; font-weight: 900; font-size: 1.1rem; color: var(--white); text-decoration: none; letter-spacing: 0.05em; }
+    .nav-logo { font-family: var(--od-sten); font-weight: 900; font-size: 1.1rem; color: var(--white); text-decoration: none; letter-spacing: 0.05em; }
     .nav-logo span { color: var(--teal-light); }
     .nav-links { display: flex; gap: 1.2rem; list-style: none; }
     .nav-links a { color: var(--text-muted); text-decoration: none; font-size: 0.85rem; font-weight: 500; transition: color 0.2s; white-space: nowrap; }
@@ -177,8 +177,8 @@
     .breadcrumb-nav span { color: var(--teal-light); }
     .hero { min-height: 90vh; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 8rem 2rem 4rem; position: relative; overflow: hidden; }
     .hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 80% 60% at 50% 40%, rgba(15,118,110,0.12) 0%, transparent 70%); pointer-events: none; }
-    .hero-eyebrow { font-family: 'Orbitron', sans-serif; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.2em; color: var(--teal-light); text-transform: uppercase; margin-bottom: 1.5rem; }
-    .hero h1 { font-family: 'Orbitron', sans-serif; font-weight: 900; font-size: clamp(1.8rem, 4vw, 3rem); line-height: 1.15; color: var(--white); margin-bottom: 1.5rem; max-width: 800px; }
+    .hero-eyebrow { font-family: var(--od-sten); font-size: 0.7rem; font-weight: 700; letter-spacing: 0.2em; color: var(--teal-light); text-transform: uppercase; margin-bottom: 1.5rem; }
+    .hero h1 { font-family: var(--od-sten); font-weight: 900; font-size: clamp(1.8rem, 4vw, 3rem); line-height: 1.15; color: var(--white); margin-bottom: 1.5rem; max-width: 800px; }
     .hero h1 span { color: var(--teal-light); }
     .hero-sub { font-size: 1.05rem; color: var(--text-muted); max-width: 620px; margin-bottom: 2.5rem; line-height: 1.75; }
     .hero-badges { display: flex; flex-wrap: wrap; gap: 0.75rem; justify-content: center; margin-bottom: 2.5rem; }
@@ -190,13 +190,13 @@
     .btn-secondary:hover { border-color: var(--teal-light); color: var(--teal-light); }
     section { padding: 5rem 2rem; }
     .container { max-width: 1100px; margin: 0 auto; }
-    .section-label { font-family: 'Orbitron', sans-serif; font-size: 0.65rem; font-weight: 700; letter-spacing: 0.2em; color: var(--teal-light); text-transform: uppercase; margin-bottom: 1rem; }
-    .section-title { font-family: 'Orbitron', sans-serif; font-weight: 900; font-size: clamp(1.4rem, 3vw, 2rem); color: var(--white); line-height: 1.2; margin-bottom: 1rem; }
+    .section-label { font-family: var(--od-sten); font-size: 0.65rem; font-weight: 700; letter-spacing: 0.2em; color: var(--teal-light); text-transform: uppercase; margin-bottom: 1rem; }
+    .section-title { font-family: var(--od-sten); font-weight: 900; font-size: clamp(1.4rem, 3vw, 2rem); color: var(--white); line-height: 1.2; margin-bottom: 1rem; }
     .section-intro { color: var(--text-muted); max-width: 700px; line-height: 1.8; margin-bottom: 3rem; }
     .cards-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; }
     .card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 10px; padding: 2rem; transition: border-color 0.2s; }
     .card:hover { border-color: var(--teal-light); }
-    .card-num { font-family: 'Orbitron', sans-serif; font-size: 0.7rem; color: var(--teal-light); font-weight: 700; letter-spacing: 0.15em; margin-bottom: 1rem; }
+    .card-num { font-family: var(--od-sten); font-size: 0.7rem; color: var(--teal-light); font-weight: 700; letter-spacing: 0.15em; margin-bottom: 1rem; }
     .card h3 { font-size: 1rem; font-weight: 600; color: var(--white); margin-bottom: 0.75rem; }
     .card p { color: var(--text-muted); font-size: 0.88rem; line-height: 1.65; }
     .tags { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1rem; }
@@ -217,7 +217,7 @@
     .ville-link .ville-nom { font-size: 0.9rem; font-weight: 600; color: var(--white); display: block; margin-bottom: 0.2rem; }
     .ville-link .ville-dept { font-size: 0.75rem; color: var(--text-muted); }
     .contact-block { background: linear-gradient(135deg, rgba(15,118,110,0.08) 0%, transparent 60%); border: 1px solid var(--border); border-radius: 12px; padding: 3.5rem; text-align: center; }
-    .contact-block h2 { font-family: 'Orbitron', sans-serif; font-weight: 900; font-size: clamp(1.3rem, 3vw, 1.8rem); color: var(--white); margin-bottom: 1rem; }
+    .contact-block h2 { font-family: var(--od-sten); font-weight: 900; font-size: clamp(1.3rem, 3vw, 1.8rem); color: var(--white); margin-bottom: 1rem; }
     .contact-block p { color: var(--text-muted); margin-bottom: 2rem; max-width: 480px; margin-left: auto; margin-right: auto; }
     .contact-info { display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; margin-top: 2rem; padding-top: 2rem; border-top: 1px solid var(--border); }
     .contact-info a { color: var(--text-muted); text-decoration: none; font-size: 0.9rem; transition: color 0.2s; }
@@ -237,7 +237,7 @@
     .block-info p{color:var(--text-muted);line-height:1.75}
     .pst{list-style:none;display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem}
     .pst li{border-top:2px solid var(--teal);padding-top:1.2rem}
-    .pst span{font-family:'Orbitron',sans-serif;font-size:.75rem;color:var(--teal-light);letter-spacing:.15em}
+    .pst span{font-family:var(--od-sten);font-size:.75rem;color:var(--teal-light);letter-spacing:.15em}
     .pst h3{color:var(--white);font-size:1.05rem;margin:.5rem 0}
     .pst p{color:var(--text-muted);font-size:.9rem;line-height:1.65}
     .more{margin-top:2rem;color:var(--text-muted)}.more a{color:var(--teal-light)}
@@ -262,6 +262,7 @@
 <link rel="icon" href="/favicon-192.png" type="image/png" sizes="192x192">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <meta name="theme-color" content="#050606">
+<link rel="stylesheet" href="/typo.css">
 </head>
 <body>
 

@@ -1,0 +1,23 @@
+/* OrizonDrone : typographie « caisse de vol » — pochoir pour les titres, IBM Plex pour le texte */
+:root{--z-disp:'Big Shoulders Stencil Display',Impact,'Arial Narrow',sans-serif;--z-mono:'IBM Plex Mono',ui-monospace,monospace;--od-sten:'Big Shoulders Stencil Display',Impact,'Arial Narrow',sans-serif;--od-card:'Stick No Bills',Impact,'Arial Narrow',sans-serif;--od-text:'IBM Plex Sans',system-ui,sans-serif;--od-mono:'IBM Plex Mono',ui-monospace,monospace}
+body,input,textarea,select,button{font-family:var(--od-text)}
+/* grands titres au pochoir */
+h1,.hero h1,.hx h1,.section-title,.z-h2,.contact-block h2,.cta h2{font-family:var(--od-sten)!important;font-weight:900!important;text-transform:uppercase;letter-spacing:.005em!important;line-height:.95!important}
+.hero h1{font-size:clamp(2.6rem,6.4vw,4.8rem)!important}
+.hx h1{font-size:clamp(3rem,7.4vw,6.4rem)!important;max-width:11ch!important}
+.section-title{font-size:clamp(2.1rem,4.6vw,3.3rem)!important}
+.z-h2{font-size:clamp(2.5rem,5.6vw,4.4rem)!important;max-width:14ch!important}
+.contact-block h2,.cta h2{font-size:clamp(2rem,4.4vw,3rem)!important}
+/* logo */
+.nav-logo,.logo,.lg{font-family:var(--od-sten)!important;font-weight:900!important;letter-spacing:.06em!important;text-transform:uppercase}
+.nav-logo{font-size:1.6rem!important}
+.logo,.lg{font-size:1.6rem!important}
+/* titres de cartes */
+.card h3,.rl-h,.tool h3,.art h2,.sq-steps h3,.lv h3,.pq h3,.dr h3,.ch h3,.specifique h3,.service-card h3,.jc h2,.p-step h4,.nett-item h4,.client-card h3,.livrable-box h4,.form-info h3,.tech-panel-head h3,.nacelle-card h4,.why b,.eng ol li b,.pst h3,.stat-n,.p-n{font-family:var(--od-card)!important;font-weight:800!important;text-transform:uppercase;letter-spacing:.03em!important}
+.card h3,.tool h3,.sq-steps h3,.lv h3,.pq h3,.dr h3,.specifique h3,.pst h3{font-size:1.45rem!important;line-height:1.05!important}
+.art h2{font-size:1.6rem!important;line-height:1.05!important}
+.rl-h,.ch h3{font-size:1.9rem!important;line-height:1!important}
+.jc h2{font-size:1.35rem!important;line-height:1.05!important}
+/* petites étiquettes techniques */
+.section-label,.hero-eyebrow,.card-num,.service-number,.pst span,.faq-groupe-titre,.certif-label,.card-icon,.jc small,.roof-lbl,.badge,.tag,.meta{font-family:var(--od-mono)!important;font-weight:500!important}
+.eng ol li::before{font-family:var(--od-mono)!important}
