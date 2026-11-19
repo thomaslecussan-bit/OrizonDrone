@@ -6,7 +6,7 @@
 
 - Photogrammétrie et relevé 3D de bâtiments et de sites : modèle 3D texturé (OBJ, RCS, FBX), nuage de points (LAS, LAZ), orthophoto (GeoTIFF), MNT/MNS, courbes de niveau (DXF, SHP), mesures et rapport PDF.
 - Consultation des livrables sans logiciel professionnel : lien 3D dans le navigateur, ou visionneuse gratuite Orizon3D (Windows, Mac, Linux).
-- Inspection de toitures, façades et bâtiments par drone : livraison des photos brutes haute résolution, du nuage de points, du modèle 3D et des orthophotos.
+- Inspection de toitures, façades et bâtiments par drone : livraison des photos brutes haute résolution, du nuage de points, du modèle 3D et des orthophotos ; rapport d'inspection sur demande (plan de repérage, constats classés par priorité, vidéo récapitulative).
 - Nettoyage et démoussage de toitures et façades, par drone et à la perche, depuis le sol ; applicateur certifié Certibiocide.
 - Captation aérienne photo et vidéo.
 
@@ -40,6 +40,8 @@ Haute-Garonne (31), Ariège (09), Hautes-Pyrénées (65), Gers (32), Toulouse et
 - [Réalisations](https://www.orizondrone.fr/realisations/) : exemples de relevés 3D par drone
 - [Journal de chantier](https://www.orizondrone.fr/journal/) : articles et retours de chantier
 - [Orthophoto de façade par drone](https://www.orizondrone.fr/journal/orthophoto-facade-drone/) : comment on obtient une orthophoto de façade à 2 mm par pixel, à quoi elle sert, ses limites
+- [Inspection de bâtiments agricoles par drone](https://www.orizondrone.fr/journal/inspection-batiments-agricoles-drone/) : état des lieux d'une exploitation agricole du Comminges à partir d'un vol et d'un modèle 3D
+- [Inspection de toitures par drone avec rapport](https://www.orizondrone.fr/journal/inspection-toiture-drone-rapport-leucate/) : exemple d'une résidence à Leucate, 42 constats localisés et classés par priorité
 - [Modélisation 3D par drone avec le Matrice 4E](https://www.orizondrone.fr/journal/modelisation-3d-drone-matrice-4e/) : ce que le drone change pour un client, livrables et limites
 - [Relever une abbaye par drone](https://www.orizondrone.fr/journal/releve-3d-abbaye-de-bonnefont/) : retour sur le relevé de l'abbaye de Bonnefont
 - [Abbaye de Bonnefont](https://www.orizondrone.fr/realisations/abbaye-de-bonnefont/) : relevé 3D par drone d'une abbaye cistercienne à Proupiary (31), modèle 3D texturé et orthophotos des façades à 2 mm par pixel
